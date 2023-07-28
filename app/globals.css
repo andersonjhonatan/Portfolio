@@ -1,27 +1,160 @@
 @tailwind base;
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 1px solid var(--primary);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+:root {
+  --primary: rgba(102, 51, 153, 0);
+  --secondary: #21d19f00;
+}
+
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html,
+body {
+  max-height: 100vh;
+}
+
+main {
+  max-height: calc(100vh - 80px);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: 'Roboto', sans-serif;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      45deg,
+      transparent 34%,
+      #040404 35%,
+      #040404 40%,
+      transparent 41%,
+      transparent 59%,
+      #040404 60%,
+      #040404 65%,
+      transparent 66%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 34%,
+      #040404 35%,
+      #040404 40%,
+      transparent 41%,
+      transparent 59%,
+      #040404 60%,
+      #040404 65%,
+      transparent 66%
+    ),
+    radial-gradient(#040404 10%, transparent 11%),
+    radial-gradient(circle at left, #040404 5%, transparent 6%),
+    radial-gradient(circle at right, #040404 5%, transparent 6%),
+    radial-gradient(circle at top, #040404 5%, transparent 6%),
+    radial-gradient(circle at bottom, #040404 5%, transparent 6%);
+  background-size: 1em 1em;
+  background-color: #000000;
+  opacity: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.rocket {
+  background: url(../public/rockt.svg) no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  cursor: -webkit-grab;
+  will-change: transform;
+  user-select: none;
+}
+
+.rocket:active {
+  cursor: -webkit-grabbing;
+}
+
+.folder {
+  background: -webkit-linear-gradient(0deg, #000000 0%, #21d19f 100%);
+}
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.article-animation {
+  animation: slideInFromRight 0.8s ease-in-out;
+  animation-fill-mode: both;
+}
+
+/* Adicione classes individuais para atrasar a animação de cada artigo */
+.article-animation:nth-child(1) {
+  animation-delay: 0.9s; /* O primeiro artigo inicia imediatamente */
+}
+
+.article-animation:nth-child(2) {
+  animation-delay: 0.6s; /* O segundo artigo inicia após 0.3 segundos */
+}
+
+.article-animation:nth-child(3) {
+  animation-delay: 0.3s; /* O terceiro artigo inicia após 0.6 segundos */
+}
+
+ul.scroll-container {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* Para melhorar o desempenho em dispositivos móveis */
+  height: 480px; /* Altura do container para mostrar apenas uma imagem por vez */
+  border-radius: 1rem;
+}
+
+li.scroll-item {
+  scroll-snap-align: center; /* Alinhar a imagem no início do container */
+  width: 600px; /* Definindo o tamanho fixo da largura das imagens */
+  height: 600px; /* Definindo o tamanho fixo da altura das imagens */
+  margin-bottom: 8px; /* Espaço entre as imagens (opcional) */
+}
+
+.progress-bar {
+  transform-origin: 0%;
 }
