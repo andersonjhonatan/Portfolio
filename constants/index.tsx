@@ -84,10 +84,8 @@ export const certifications: SkillCertification[] = [
 ]
 
 export const work: Work[] = [
-  { id: 1, name: 'Em Breve', active: true },
-  { id: 2, name: 'Em Breve', active: true },
-  { id: 3, name: 'Em Breve', active: true },
-  { id: 4, name: 'Em Breve', active: true },
-  { id: 5, name: 'Em Breve', active: true },
-  { id: 6, name: 'Em Breve', active: true },
+  { id: 1, name: 'projects/tarefas.png', Title: 'Tarefas+', subtitle: 'subtitle', github: 'View Github', deploy: 'Live Preview', linkDeploy: 'https://tasks-p26e.vercel.app/', hastags: ['#ReactJS', '#JavaScript', '#NextJS', '#Typescript', '#Firebase']},
+  { id: 2, name: './oi.png', Title: 'titulo', subtitle: 'subtitle', github: 'View Github', deploy: 'Live Preview', linkDeploy: 'https://tasks-p26e.vercel.app/', hastags: ['#ReactJS', '#JavaScript']},
+  { id: 3, name: './oi.png', Title: 'titulo', subtitle: 'subtitle', github: 'View Github', deploy: 'Live Preview', linkDeploy: 'https://tasks-p26e.vercel.app/', hastags: ['#ReactJS', '#JavaScript', '#NextJS']},
+  { id: 4, name: './oi.png', Title: 'titulo', subtitle: 'subtitle', github: 'View Github', deploy: 'Live Preview', linkDeploy: 'https://tasks-p26e.vercel.app/', hastags: ['#ReactJS', '#JavaScript']},
 ]

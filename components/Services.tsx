@@ -31,7 +31,7 @@ const Services = (props: Props) => {
             <span className='text-5xl folder rounded-sm'>
               <LuFolderGit2 />
             </span>
-            <h1>
+            <h1 className='cursor-default font-extrabold'>
               Desenvolvimento
               <span
                 className='text-[#21d19f] text-2xl
@@ -50,7 +50,7 @@ const Services = (props: Props) => {
             <span className='text-5xl folder rounded-sm'>
               <HiOutlineDeviceMobile />
             </span>
-            <h1>
+            <h1 className='cursor-default font-extrabold'>
               Montion
               <span
                 className='text-[#21d19f] text-2xl
@@ -68,7 +68,7 @@ const Services = (props: Props) => {
             <span className='text-5xl folder rounded-sm font-thin'>
               <TiDeviceDesktop />
             </span>
-            <h1>
+            <h1 className='cursor-default font-extrabold'>
               Analista de sistema
               <span
                 className='text-[#21d19f] text-2xl
