@@ -19,13 +19,13 @@ const Work = () => {
             className=' flex items-stretch justify-between flex-row-reverse py-4 bg-[#080808] border border-[#3a3a3a79] rounded-md text-start'
           >
             <section className='flex-2 flex justify-center'>
-              <Image src={`/${item.name}`} alt={item.name} width={150} height={150} className='w-full object-cover rounded-lg mr-4' />
+              <Image src={`/${item.name}`} alt={item.name} width={150} height={150} className='w-full object-contain rounded-lg mr-4' />
             </section>
             <section className='flex flex-col rounded-md flex-1 gap-4 pl-4'>
               <h1 className='text-2xl text-white font-bold'>{item.Title}</h1>
               <h2 className='text-gray-400'>{item.subtitle}</h2>
               <article className='gap-5 flex'>
-                <Link href='d' target='_blank' className='flex text-xs gap-3 items-center hover:bg-orange-400 hover:p-1 hover:rounded-lg transition-all duration-300 delay-100'>
+                <Link href={item.linkGit} target='_blank' className='flex text-xs gap-3 items-center hover:bg-orange-400 hover:p-1 hover:rounded-lg transition-all duration-300 delay-100'>
                   <p><SiCodereview /></p>
                   {item.github}
                 </Link>

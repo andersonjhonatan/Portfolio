@@ -7,4 +7,5 @@ export type Work ={
   deploy: string;
   hastags: string[];
   linkDeploy: string;
+  linkGit: string;
 }
