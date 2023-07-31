@@ -84,7 +84,7 @@ export const certifications: SkillCertification[] = [
 ]
 
 export const work: Work[] = [
-  { id: 1, name: 'projects/tarefas.png', Title: 'Tarefas+', subtitle: 'Projeto no qual possa adicionar tarefas cotidianas.', github: 'View Github', deploy: 'Live Preview', linkDeploy: 'https://tasks-p26e.vercel.app/', linkGit:'https://github.com/andersonjhonatan/Tasks', hastags: ['#ReactJS', '#JavaScript', '#NextJS', '#Typescript', '#Firebase']},
+  { id: 1, name: 'projects/tarefas.png', Title: 'Tarefas+', subtitle: 'Projeto que possa adicionar tarefas cotidianas ou até mesmo criar seus estudos e ainda pode compartilhar com a galera para receber feeedback', github: 'View Github', deploy: 'Live Preview', linkDeploy: 'https://tasks-p26e.vercel.app/', linkGit:'https://github.com/andersonjhonatan/Tasks', hastags: ['#ReactJS', '#JavaScript', '#NextJS', '#Typescript', '#Firebase']},
   { id: 2, name: 'projects/montagem.png', Title: 'Montagem de Móveis', subtitle: 'Desenvolvi um projeto sob medida para um cliente, superando expectativas e entregando resultados excepcionais.', github: 'View Github', deploy: 'Live Preview', linkDeploy: 'https://montagem-esm28uu31-andersonjhonatan.vercel.app/',linkGit:'https://github.com/andersonjhonatan/Montagem', hastags: ['#ReactJS', '#JavaScript', '#NextJS']},
   { id: 3, name: 'projects/estella.png', Title: 'Stella Explorations', subtitle: 'Projeto no qual criei um site estático de alto impacto com código JavaScript otimizado ao máximo.', github: 'View Github', deploy: 'Live Preview', linkDeploy: 'https://stellar-explorations.onrender.com/',linkGit:'https://github.com/andersonjhonatan/Stellar_Tailwind', hastags: ['#ReactJS', '#JavaScript', '#Tailwindcss', '#NextJS']},
 ]

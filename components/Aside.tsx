@@ -19,10 +19,10 @@ const Aside = () => {
   }, []);
 
   return (
-    <aside className=' flex flex-col h-5/6 justify-end gap-8 absolute left-16 text-white'>
-      <ul className='flex flex-col gap-3 pl-8'>
+    <aside className='flex justify-center  text-white z-40 border w-full mt-12'>
+      <ul className='flex gap-3'>
         {iconAnimations.map((style, index) => (
-          <animated.li key={index} style={style} className='hover:text-[#21D19F]' >
+          <animated.li key={index} style={style} className='hover:text-[#21D19F] text-3xl duration-300 delay-75 ease-in-out' >
             {icons[index]}
           </animated.li>
         ))}

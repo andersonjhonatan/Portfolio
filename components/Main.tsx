@@ -5,7 +5,6 @@ import photoPrincipal from '@/public/Captura_de_tela_de_2023-03-27_10-46-05-remo
 import { IMain } from '@/interfaces';
 import { motion, AnimatePresence } from 'framer-motion';
 
-
 import Scroll from './Scroll';
 import Aside from './Aside';
 import { useSpring, animated } from 'react-spring';
@@ -24,7 +23,7 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
   const imageAnimation = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    config: { duration: 500 },
+    config: { duration: 200 },
   });
 
   useEffect(() => {
@@ -32,14 +31,12 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
   }, []);
 
   return (
-    <main className='flex items-center sm:h-screen justify-center sm:w-screen mt-10 transition-all'>
-      {
-        !show &&  <Developer />
-      }
-  
-      {show && <Aside />}
-      <section className='flex items-center justify-center z-0'>
-        <section className='bg-black border-4  border-[#3dffc8] rounded-full align-bottom flex justify-end items-end'>
+    <main className='flex items-center sm:h-screen justify-center sm:w-screen mt-10 transition-all border'>
+      {!show && <Developer />}
+      <div className='flex items-center justify-center z-0 border h-full w-[90%] border-green-400'>
+        <section className='border border-yellow-400 m-8'>
+
+        <section className='bg-black border-4  border-[#ff3d3d] rounded-full align-bottom flex justify-end items-end flex-col'>
           {show ||
             (isVisible && (
               <button
@@ -50,17 +47,19 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
               </button>
             ))}
           {!show ? (
-            <animated.div style={imageAnimation}>
+            <animated.div style={imageAnimation} className='border border-[#ffdb3d]'>
               <Image
                 src={photoPrincipal}
                 alt='logo'
                 width={400}
                 height={400}
-                className='rounded-full bg-[#00000000] z-10'
+                className='rounded-full bg-[#00000000] z-10 border'
               />
             </animated.div>
           ) : (
-            <animated.div style={imageAnimation}>
+            <animated.div
+              style={imageAnimation}
+            >
               <Image
                 src={photoPrincipal}
                 alt='logo'
@@ -71,17 +70,21 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
             </animated.div>
           )}
         </section>
-        {show && (
-          <Scroll
-            Hello={Hello}
-            Services={Services}
-            Work={Work}
-            Skills={Skills}
-            Contact={Contact}
-            Certificates={Certificates}
-          />
-        )}
-      </section>
+        <aside>
+        <Aside />
+        </aside>
+        </section>
+      {show && (
+        <Scroll
+          Hello={Hello}
+          Services={Services}
+          Work={Work}
+          Skills={Skills}
+          Contact={Contact}
+          Certificates={Certificates}
+        />
+      )}
+      </div>
     </main>
   );
 };

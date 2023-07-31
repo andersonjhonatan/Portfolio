@@ -23,7 +23,7 @@ const Work = () => {
             </section>
             <section className='flex flex-col rounded-md flex-1 gap-4 pl-4'>
               <h1 className='text-2xl text-white font-bold'>{item.Title}</h1>
-              <h2 className='text-gray-400'>{item.subtitle}</h2>
+              <h2 className='text-gray-400 w-10/12 mr-6 text-justify break-all indent-4'>{item.subtitle}</h2>
               <article className='gap-5 flex'>
                 <Link href={item.linkGit} target='_blank' className='flex text-xs gap-3 items-center hover:bg-orange-400 hover:p-1 hover:rounded-lg transition-all duration-300 delay-100'>
                   <p><SiCodereview /></p>
