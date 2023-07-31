@@ -31,12 +31,11 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
   }, []);
 
   return (
-    <main className='flex items-center sm:h-screen justify-center sm:w-screen mt-10 transition-all border'>
+    <main className='flex items-center sm:h-screen justify-center sm:w-screen mt-10 transition-all'>
       {!show && <Developer />}
-      <div className='flex items-center justify-center z-0 border h-full w-[90%] border-green-400'>
-        <section className='border border-yellow-400 m-8'>
-
-        <section className='bg-black border-4  border-[#ff3d3d] rounded-full align-bottom flex justify-end items-end flex-col'>
+      <div className='flex items-center justify-center z-0 h-full w-[90%] '>
+        <section className='flex-auto w-[20%] flex flex-col justify-center items-center'>
+        <section className='bg-black border-4  border-[#21d19f] rounded-full align-bottom flex justify-end items-end flex-col'>
           {show ||
             (isVisible && (
               <button
@@ -47,7 +46,7 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
               </button>
             ))}
           {!show ? (
-            <animated.div style={imageAnimation} className='border border-[#ffdb3d]'>
+            <animated.div style={imageAnimation}>
               <Image
                 src={photoPrincipal}
                 alt='logo'
@@ -63,8 +62,8 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
               <Image
                 src={photoPrincipal}
                 alt='logo'
-                width={300}
-                height={300}
+                width={400}
+                height={400}
                 className='rounded-full bg-[#00000000] z-10'
               />
             </animated.div>

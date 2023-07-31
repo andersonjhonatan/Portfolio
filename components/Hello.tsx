@@ -51,24 +51,23 @@ const Hello: React.FC = () => {
 
   return (
     <motion.div
-      className='text-white ml-24 sm:w-[35rem] gap-4 sm:h-auto justify-center flex items-center'
+      className='text-white ml-24 sm:w-full gap-4 sm:h-full justify-center flex items-center'
       initial={{ x: '-100%', opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: '100%', opacity: 0 }}
       transition={{ duration: 0.5, ease: 'linear' }}
     >
       <section>
-        <motion.p className='text-[18rem] text-[#3a3a3a79] font-thin'>
-          &#123;
-        </motion.p>
+        <motion.p className='sm:text-[26rem] text-[#3a3a3a79] font-thin'>&#123;</motion.p>
       </section>
-      <section className='gap-4 flex flex-col'>
+      <section className='gap-8 flex flex-col'>
         <motion.h1 className='sm:text-4xl text-center'>
-            <strong className='text-[#21D19F]'>{title}</strong> Anderson
+          <strong className='text-[#21D19F]'>{title}</strong> Anderson
         </motion.h1>
-        <motion.p className='mt-6 text-center text-lg '>
-          <strong className='text-[#21D19F]'>{desenvolvedor}</strong>, Meu foco é criar
-          soluções web completas e envolventes como desenvolvedor FullStack e Analista de Sistemas.
+        <motion.p className='mt-6 text-center text-lg break-all indent-4  mr-4'>
+          <strong className='text-[#21D19F]'>{desenvolvedor}</strong>, especializado em criar soluções
+          web envolventes e completas. Sou apaixonado por desenvolver experiências web excepcionais, combinando
+          criatividade e funcionalidade para alcançar resultados significativos.
           <motion.p className='pt-12 text-center'>
             Vamos construir algo incrível juntos{' '}
             <motion.span style={{ fontSize: '2rem' }} className='text-[#21D19F] text-sm'>

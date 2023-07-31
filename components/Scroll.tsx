@@ -140,7 +140,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
     });
 
   return (
-    <div className=' flex sm:p-4 justify-center items-center z-0'>
+    <div className=' flex sm:p-4 justify-between items-center z-0 sm:h-full w-4/5 border border-blue-600 flex-auto'>
       <ul className='text-2xl gap-10 transform flex flex-col  text-white text-center p-4'>
         {hello ? (
           <Link

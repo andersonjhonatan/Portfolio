@@ -12,7 +12,7 @@ const Services = (props: Props) => {
     to: { opacity: 1 },
   });
   return (
-    <div className='text-white ml-16 sm:w-4/5 sm:h-auto justify-center flex items-center  p-4'>
+    <div className='text-white sm:w-full sm:h-full justify-center flex items-center  h-full'>
       <section className=' mt-14'>
         <animated.p
           style={fadeAnimation}
@@ -23,7 +23,6 @@ const Services = (props: Props) => {
       </section>
 
       <section className='ml-8 flex items-center flex-col gap-8 '>
-
         <h1 className='text-3xl mb-8'>Serviços<span className='text-[#21d19f] text-2xl'> .</span></h1>
         <section className='flex gap-2'>
 
