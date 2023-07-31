@@ -11,7 +11,7 @@ const Work = () => {
       <div>
         <p className='text-[25rem] text-[#3a3a3a79] font-thin'>&#123;</p>
       </div>
-      <div className='flex flex-col max-h-full text-center gap-2 w-full'>
+      <div className='flex flex-col max-h-full text-center gap-2 w-full ml-4'>
         <h1 className='text-3xl'>Projects<span className='text-[#21d19f] text-2xl'>.</span></h1>
         {work.map((item) => (
           <div

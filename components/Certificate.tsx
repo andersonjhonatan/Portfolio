@@ -33,20 +33,20 @@ const Certificate = () => {
   };
 
   return (
-    <div className='text-white ml-14 w-3/5 gap-8 justify-center flex items-center p-4'>
+    <div className='text-white w-full gap-8 justify-center flex items-center p-4 h-full border'>
       <section className=' flex-2 top-0 mb-8'>
         <p className='text-[20rem] text-[#3a3a3a79] font-thin '>&#123;</p>
       </section>
       <section className='text-center flex flex-col items-center'>
         <article className='flex justify-end mb-8'>
           <b className='bg-[#21d19f] text-black w-4 h-4 mt-3 mr-3 flex justify-center text-start pb-4 text-xs rounded-full absolute '>{certifications.length}</b>
-          <h1 className='text-3xl p-4 z-10'>
+          <h1 className='text-3xl p-4 z-00'>
             Certificates<span className='text-[#21d19f] text-2xl'>.</span>
           </h1>
         </article>
         <section className='flex items-center justify-around gap-4'>
           <motion.ul
-            className='grid grid-cols-2 gap-2  container'
+            className='grid grid-cols-3 gap-2 ml-3'
             variants={container}
             initial='hidden'
             animate='visible'

@@ -18,11 +18,11 @@ const Skills: React.FC = () => {
   }, []);
 
   return (
-    <div className='text-white ml-14 w-3/4 gap-8 justify-center flex items-center p-4'>
-      <section className=' flex-2 top-0 mb-16'>
+    <div className='text-white w-full gap-8 justify-center flex items-center p-4'>
+      <section className='mr-8'>
         <p className='text-[25rem] text-[#3a3a3a79] font-thin '>&#123;</p>
       </section>
-      <section className='flex flex-col w-2/4 items-center gap-3 flex-1 mt-4'>
+      <section className='flex flex-col h-full items-center gap-3 p-4'>
         <h1 className='text-3xl mt-6'>
           Skills<span className='text-[#21d19f] text-2xl'>.</span>
         </h1>
