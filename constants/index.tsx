@@ -36,11 +36,13 @@ export const icons = [
   <Link href='https://github.com/andersonjhonatan' target='_blank' key="github">
     <PiGithubLogoLight className='w-8 h-8 hover:animate-pulse hover:text-[#21D19F]' />
   </Link>,
-  <PiWhatsappLogoLight key="whatsapp" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse' />,
+  <Link href='https://api.whatsapp.com/send?phone=5583993595471' target='_blank' key="whatsapp">
+    <PiWhatsappLogoLight key="whatsapp" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse'/>
+  </Link>,
   <Link href='https://www.linkedin.com/in/anderson-jhonatan/' key="linkedin">
     <PiLinkedinLogoLight className='w-8 h-8 hover:text-[#21D19F] hover:animate-pulse' />
   </Link>,
-  <Link href='https://www.instagram.com/_anderson.jhonatan/' key="linkedin">
+  <Link href='https://www.instagram.com/_anderson.jhonatan/' key="instagram">
     <PiInstagramLogoLight key="instagram" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse' />
   </Link>
 ];
