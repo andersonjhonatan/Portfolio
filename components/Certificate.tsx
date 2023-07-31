@@ -33,7 +33,7 @@ const Certificate = () => {
   };
 
   return (
-    <div className='text-white w-full gap-8 justify-center flex items-center p-4 h-full border'>
+    <div className='text-white w-full gap-8 justify-center flex items-center p-4 h-full'>
       <section className=' flex-2 top-0 mb-8'>
         <p className='text-[20rem] text-[#3a3a3a79] font-thin '>&#123;</p>
       </section>

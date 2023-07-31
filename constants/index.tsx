@@ -1,10 +1,10 @@
 // constants.ts
 import {
-  PiInstagramLogoDuotone,
-  PiLinkedinLogoDuotone,
-  PiWhatsappLogoDuotone,
-  PiGithubLogoDuotone,
-  PiTiktokLogoDuotone,
+  PiInstagramLogoLight,
+  PiLinkedinLogoLight,
+  PiWhatsappLogoLight,
+  PiGithubLogoLight,
+  PiTiktokLogoLight,
 } from 'react-icons/pi';
 import Link from 'next/link';
 import { Skill } from '@/types/Skill';
@@ -32,15 +32,17 @@ export const MainProps = {
 };
 
 export const icons = [
-  <PiTiktokLogoDuotone key="tiktok" className='w-8 h-8 hover:animate-pulse hover:cursor-pointer hover:text-[#21D19F]' />,
+  <PiTiktokLogoLight key="tiktok" className='w-8 h-8 hover:animate-pulse hover:cursor-pointer hover:text-[#21D19F]' />,
   <Link href='https://github.com/andersonjhonatan' target='_blank' key="github">
-    <PiGithubLogoDuotone className='w-8 h-8 hover:animate-pulse hover:text-[#21D19F]' />
+    <PiGithubLogoLight className='w-8 h-8 hover:animate-pulse hover:text-[#21D19F]' />
   </Link>,
-  <PiWhatsappLogoDuotone key="whatsapp" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse' />,
+  <PiWhatsappLogoLight key="whatsapp" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse' />,
   <Link href='https://www.linkedin.com/in/anderson-jhonatan/' key="linkedin">
-    <PiLinkedinLogoDuotone className='w-8 h-8 hover:text-[#21D19F] hover:animate-pulse' />
+    <PiLinkedinLogoLight className='w-8 h-8 hover:text-[#21D19F] hover:animate-pulse' />
   </Link>,
-  <PiInstagramLogoDuotone key="instagram" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse' />,
+  <Link href='https://www.instagram.com/_anderson.jhonatan/' key="linkedin">
+    <PiInstagramLogoLight key="instagram" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse' />
+  </Link>
 ];
 
 

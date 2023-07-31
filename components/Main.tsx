@@ -42,7 +42,7 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
                 onClick={handleClick}
                 className='text-white absolute left-0 right-0 m-auto p-2 rounded-3xl text-2xl w-40 animate-pulse z-50'
               >
-                {!show && 'Click'}
+                {!show && 'Start'}
               </button>
             ))}
           {!show ? (

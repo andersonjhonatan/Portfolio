@@ -19,7 +19,7 @@ const Aside = () => {
   }, []);
 
   return (
-    <aside className='flex justify-center  text-white z-40 border w-full mt-12'>
+    <aside className='flex justify-center  text-white z-40 w-full mt-12'>
       <ul className='flex gap-3'>
         {iconAnimations.map((style, index) => (
           <animated.li key={index} style={style} className='hover:text-[#21D19F] text-3xl duration-300 delay-75 ease-in-out' >
