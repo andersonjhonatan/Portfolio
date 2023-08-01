@@ -27,7 +27,7 @@ const Work = () => {
     },
   };
   return (
-    <div className='text-white sm:w-full justify-around flex items-center h-full'>
+    <div className='text-white w-full justify-around flex items-center h-full'>
       <div>
         <p className='text-[25rem] text-[#3a3a3a79] font-thin'>&#123;</p>
       </div>
@@ -35,7 +35,7 @@ const Work = () => {
         variants={container}
         initial='hidden'
         animate='visible'
-        className='flex flex-col max-h-full text-center gap-2 w-full ml-4'
+        className='flex flex-col h-full text-center gap-2 w-full ml-4 '
       >
         <h1 className='text-3xl my-3'>
           Projects<span className='text-[#21d19f] text-2xl'>.</span>
@@ -44,13 +44,13 @@ const Work = () => {
           <motion.div
             key={item.id}
             variants={itemVariants}
-            className='item container flex items-stretch justify-between  flex-row-reverse py-2  bg-[#080808] border border-[#29292979] rounded-md text-start'
+            className=' flex w-full flex-row-reverse py-2  bg-[#080808] rounded-md text-start'
           >
             <motion.section
               variants={itemVariants}
               initial='hidden'
               animate='visible'
-              className='flex-auto flex justify-center mr-4'
+              className='flex-auto flex justify-center mr-4 '
             >
               <Image
                 src={`/${item.name}`}

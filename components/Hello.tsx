@@ -51,14 +51,14 @@ const Hello: React.FC = () => {
 
   return (
     <motion.div
-      className='text-white ml-24 sm:w-full gap-4 sm:h-full justify-center flex items-center'
+      className='text-white ml-24 w-full gap-4 h-full justify-center flex items-center'
       initial={{ x: '-100%', opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: '100%', opacity: 0 }}
       transition={{ duration: 0.5, ease: 'linear' }}
     >
       <section>
-        <motion.p className='sm:text-[26rem] text-[#3a3a3a79] font-thin'>&#123;</motion.p>
+        <motion.p className='text-[26rem] text-[#3a3a3a79] font-thin'>&#123;</motion.p>
       </section>
       <section className='gap-8 flex flex-col'>
         <motion.h1 className='sm:text-4xl text-center'>

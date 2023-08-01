@@ -31,7 +31,7 @@ const Rocket = (props: Props) => {
   return (
     <div className='absolute z-50 block'>
       <animated.div
-        className='rocket w-[50px] h-[50px] max-iphone:w-[35px] max-iphone:h-[35px] max-iphone:ml-8'
+        className='rocket w-[50px] h-[50px] max-iphone:w-[30px] max-iphone:h-[30px] max-iphone:ml-10'
         {...bind()}
         style={{
           transform: to(

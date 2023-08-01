@@ -117,8 +117,8 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
     });
 
   return (
-    <div className=' flex sm:p-4 justify-between items-center z-0 sm:h-full w-4/5  flex-auto'>
-      <ul className='text-2xl gap-10 transform flex flex-col  text-white text-center p-4'>
+    <div className=' flex p-4 justify-between items-center z-0 h-full w-4/5 flex-auto max-iphone:flex-col max-iphone:h-full'>
+      <ul className='text-2xl gap-10 transform flex flex-col   text-white text-center p-4 0 max-iphone:w-full max-iphone:flex-row'>
         {hello ? (
           <Link
             href='#hello'
@@ -133,7 +133,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
             href='#hello'
             onClick={handleClickHello}
             className=' transition-all flex
-        justify-start  pl-6 rotate-[-15deg] rounded-sm text-lg'
+        justify-start  pl-6 rotate-[-15deg] rounded-sm text-lg '
           >
             <animated.li style={IconAnimation(visibleItems.hello)}>{Hello}</animated.li>
           </Link>
