@@ -9,6 +9,5 @@ export interface IMain {
   Services: string;
   Work: string;
   Skills: string;
-  Contact: string;
   Certificates: string;
 };

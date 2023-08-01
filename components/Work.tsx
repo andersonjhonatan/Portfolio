@@ -13,7 +13,7 @@ const Work = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.2,
+        delayChildren: 0.5,
         staggerChildren: 0.4,
       },
     },
@@ -22,7 +22,7 @@ const Work = () => {
   const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 15,
+      y:0,
       opacity: 1,
     },
   };
@@ -37,14 +37,14 @@ const Work = () => {
         animate='visible'
         className='flex flex-col max-h-full text-center gap-2 w-full ml-4'
       >
-        <h1 className='text-3xl'>
+        <h1 className='text-3xl my-3'>
           Projects<span className='text-[#21d19f] text-2xl'>.</span>
         </h1>
         {work.map((item) => (
           <motion.div
             key={item.id}
             variants={itemVariants}
-            className='item container flex items-stretch justify-between   flex-row-reverse py-4  bg-[#080808] border border-[#29292979] rounded-md text-start'
+            className='item container flex items-stretch justify-between  flex-row-reverse py-2  bg-[#080808] border border-[#29292979] rounded-md text-start'
           >
             <motion.section
               variants={itemVariants}

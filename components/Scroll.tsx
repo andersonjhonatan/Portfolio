@@ -15,18 +15,16 @@ type VisibleItems = {
   services: boolean;
   work: boolean;
   skills: boolean;
-  contact: boolean;
   certificates: boolean;
   onClick: () => void;
 };
 
-const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates }) => {
+const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
   const [visibleItems, setVisibleItems] = useState<VisibleItems>({
     hello: false,
     services: false,
     work: false,
     skills: false,
-    contact: false,
     certificates: false,
     onClick: () => {},
   });
@@ -35,7 +33,6 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
   const [services, setServices] = useState(false);
   const [work, setWork] = useState(false);
   const [skills, setSkills] = useState(false);
-  const [contact, setContact] = useState(false);
   const [certificate, setCertificate] = useState(false);
 
   const handleClickHello = () => {
@@ -43,7 +40,6 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
     setServices(false);
     setWork(false);
     setSkills(false);
-    setContact(false);
     setCertificate(false);
 
   };
@@ -53,7 +49,6 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
     setServices(true);
     setWork(false);
     setSkills(false);
-    setContact(false);
     setCertificate(false);
 
   };
@@ -63,7 +58,6 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
     setServices(false);
     setWork(true);
     setSkills(false);
-    setContact(false);
     setCertificate(false);
 
   };
@@ -73,17 +67,6 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
     setServices(false);
     setWork(false);
     setSkills(true);
-    setContact(false);
-    setCertificate(false);
-
-  };
-
-  const handleClickContact = () => {
-    setHello(false);
-    setServices(false);
-    setWork(false);
-    setSkills(false);
-    setContact(true);
     setCertificate(false);
 
   };
@@ -93,7 +76,6 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
     setServices(false);
     setWork(false);
     setSkills(false);
-    setContact(false);
     setCertificate(true);
   }
 
@@ -121,11 +103,6 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
         () =>
           setVisibleItems((prevVisibleItems) => ({ ...prevVisibleItems, certificates: true })),
         delay * 4
-      ),
-      setTimeout(
-        () =>
-          setVisibleItems((prevVisibleItems) => ({ ...prevVisibleItems,  contact: true })),
-        delay * 5
       ),
     ];
 
@@ -230,33 +207,12 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
             <Link
               href='#certificates'
               onClick={handleClickCertificates}
-              className='text-lg hover:bg-[#36363644] transition-all hover:rounded-sm rotate-[15deg] flex sm:justify-end justify-center pr-3'
+              className='text-lg hover:bg-[#36363644] transition-all hover:rounded-sm rotate-[15deg] flex justify-center pr-3'
             >
               <animated.li style={IconAnimation(visibleItems.certificates)}>
                 {Certificates}
               </animated.li>
             </Link>
-        )}
-        {contact ? (
-          <Link
-            href='#contact'
-            onClick={handleClickContact}
-            className='bg-[#21D19F] transition-all py-1 rotate-[20deg] rounded-sm flex pl-2 sm:justify-start text-lg'
-          >
-            <animated.li style={IconAnimation(visibleItems.contact)}>
-            {Contact}
-            </animated.li>
-          </Link>
-        ) : (
-          <Link
-            href='#contact'
-            onClick={handleClickContact}
-            className='text-lg hover:bg-[#36363644] transition-all pr-3 justify- hover:rounded-sm rotate-[20deg] flex '
-          >
-            <animated.li style={IconAnimation(visibleItems.contact)}>
-              {Contact}
-            </animated.li>
-          </Link>
         )}
       </ul>
       {hello && <HelloComponent />}
@@ -264,7 +220,6 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificate
       {work && <WorkComponent />}
       {skills && <SkillsComponent />}
       {certificate && <CertificateComponent  />}
-      {contact && <ContactComponent />}
     </div>
   );
 };

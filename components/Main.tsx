@@ -10,7 +10,7 @@ import Aside from './Aside';
 import { useSpring, animated } from 'react-spring';
 import Developer from '@/components/animation/Developer';
 
-const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates }) => {
+const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
   const [show, setShow] = useState(false);
   const handleClick = () => {
     setTimeout(() => {
@@ -34,7 +34,7 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
     <main className='flex items-center sm:h-screen justify-center sm:w-screen mt-10 transition-all'>
       {!show && <Developer />}
       <div className='flex items-center justify-center z-0 h-full w-[90%] '>
-        <section className='flex-auto w-[20%] flex flex-col justify-center items-center'>
+        <section className='flex-auto w-[20%] flex flex-col justify-center items-center pt-16'>
         <section className='bg-black border-4  border-[#21d19f] rounded-full align-bottom flex justify-end items-end flex-col'>
           {show ||
             (isVisible && (
@@ -79,7 +79,6 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Contact, Certificates 
           Services={Services}
           Work={Work}
           Skills={Skills}
-          Contact={Contact}
           Certificates={Certificates}
         />
       )}
