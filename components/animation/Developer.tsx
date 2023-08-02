@@ -46,7 +46,7 @@ const Developer = () => {
           ease: 'linear',
         }}
         onAnimationComplete={() => setAnimationProps(getRandomDirection())} // Set a new random direction after each complete animation loop
-        style={{ overflow: 'hidden' }}
+        style={{ overflow: 'hidden', transform: 'translateZ(0)' }} // Removed the 'translateZ(0)' here
       >
         <p className='text-[#1b1b1b91] text-9xl max-ipad:text-6xl'>Web Developer</p>
       </motion.div>

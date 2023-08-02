@@ -117,7 +117,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
     });
 
   return (
-    <div className=' flex p-4 justify-between items-center z-0 h-full w-4/5  flex-auto max-iphone:flex-col max-iphone:h-full border max-ipad:w-4/5'>
+    <div className=' flex p-4 justify-between items-center z-0 h-full w-4/5  flex-auto max-iphone:flex-col max-iphone:h-full  max-ipad:ml-2 max-ipad:w-4/5'>
       <ul className='text-2xl gap-10 transform flex flex-col text-white text-center p-4 0 max-iphone:w-full max-iphone:flex-row max-ipad:hidden'>
         {hello ? (
           <Link

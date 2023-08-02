@@ -68,12 +68,12 @@ const Hello: React.FC = () => {
           <strong className='text-[#21D19F]'>{desenvolvedor}</strong>, especializado em criar soluções
           web envolventes e completas. Sou apaixonado por desenvolver experiências web excepcionais, combinando
           criatividade e funcionalidade para alcançar resultados significativos.
-          <motion.p className='pt-12 text-center'>
+          <motion.span className='pt-12 text-center'>
             Vamos construir algo incrível juntos{' '}
             <motion.span style={{ fontSize: '2rem' }} className='text-[#21D19F] text-sm'>
               !
             </motion.span>
-          </motion.p>
+          </motion.span>
         </motion.p>
       </section>
     </motion.div>

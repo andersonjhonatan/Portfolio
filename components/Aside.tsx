@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useTrail, animated } from 'react-spring';
 import { icons } from '@/constants';
-import Image from 'next/image';
-import fotoPrincipal from '@/public/instagram.jpeg'
 
 
 const Aside = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [inst, setInst] = useState(false);
 
-  // Use react-spring useTrail to animate the icons
   const iconAnimations = useTrail(icons.length, {
+    id: 1,
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
     config: { duration: 300 },
   });
 
-  // Use useEffect to trigger animation when component appears on the screen
   useEffect(() => {
     setIsVisible(true);
   }, []);
