@@ -25,7 +25,7 @@ const Aside = () => {
     <aside className='flex justify-center  text-white z-40 w-full mt-12 flex-col'>
       <ul className='flex gap-3'>
         {iconAnimations.map((style, index) => (
-          <animated.li key={index} style={style} className='hover:text-[#21D19F] text-3xl duration-300 delay-75 ease-in-out'>
+          <animated.li key={index} style={style} className='hover:text-[#21D19F] text-3xl max-ipad:text-2xl duration-300 delay-75 ease-in-out'>
             {icons[index]}
           </animated.li>
         ))}

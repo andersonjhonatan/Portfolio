@@ -12,19 +12,19 @@ const Services = (props: Props) => {
     to: { opacity: 1 },
   });
   return (
-    <div className='text-white sm:w-full sm:h-full justify-center flex items-center  h-full'>
-      <section className=' mt-14'>
+    <div className='text-white justify-center flex items-center  h-full max-ipad:w-full'>
+      <section className=' mt-14 max-ipad:hidden'>
         <animated.p
           style={fadeAnimation}
-          className='text-[25rem] text-[#3a3a3a79] font-thin'
+          className='text-[25rem] max-ipad:text-[15rem] text-[#3a3a3a79] font-thin'
         >
           &#123;
         </animated.p>
       </section>
 
-      <section className='ml-8 flex items-center flex-col gap-8 '>
-        <h1 className='text-3xl mb-8'>Serviços<span className='text-[#21d19f] text-2xl'> .</span></h1>
-        <section className='flex gap-2'>
+      <section className='ml-8 max-ipad:ml-0 max-ipad:w-full max-ipad:h-full max-ipad:flex max-ipad:justify-center flex max-ipad:items-center items-center flex-col gap-8 max-ipad:gap-8 border border-orange-500'>
+        <h1 className='text-3xl mb-8 max-ipad:mb-0'>Serviços<span className='text-[#21d19f] text-2xl'> .</span></h1>
+        <section className='flex gap-2 max-ipad:w-full'>
 
           <article className='gap-4 flex flex-col bg-[#080808] p-4 rounded-sm w-60 border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation'>
             <span className='text-5xl folder rounded-sm'>
@@ -39,7 +39,7 @@ const Services = (props: Props) => {
                 .
               </span>
             </h1>
-            <p>
+            <p className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0'>
               Desenvolvo sites profissionais, blogs, portfólios, landing pages e
               e-commerce
             </p>
@@ -58,7 +58,7 @@ const Services = (props: Props) => {
                 .
               </span>
             </h1>
-            <p>
+            <p  className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0'>
             Crie engajamento com abordagens que emanem modernidade, cativando o usuário por meio de interações arrojadas e inovadoras
             </p>
           </article>
@@ -76,7 +76,7 @@ const Services = (props: Props) => {
                 .
               </span>
             </h1>
-            <p>
+            <p  className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0'>
             Como analista de sistemas, refine a arquitetura digital com soluções que sejam vanguardistas, capturando a atenção dos usuários e otimizando suas experiências.
             </p>
           </article>
