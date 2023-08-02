@@ -55,7 +55,7 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
       <main className='flex items-center  h-screen  justify-center w-screen mt-10 transition-all max-iphone:flex-col max-iphone:w-[100%]'>
         {!show && <Developer />}
         <div className='flex items-center  max-iphone:flex-col justify-center z-0 h-full w-[90%] max-iphone:w-[100%]'>
-          <section className='flex-auto w-[20%] max-iphone:w-full flex flex-col justify-center items-center pt-16 max-iphone:pt-4 border'>
+          <section className='flex-auto w-[20%] max-iphone:w-full flex flex-col justify-center items-center pt-16 max-iphone:pt-4'>
             <section className='bg-black border-4 border-[#21d19f] rounded-full align-bottom flex justify-end items-end flex-col'>
               {show ||
                 (isVisible && (
@@ -77,7 +77,9 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
                 <Image
                   src={photoPrincipal}
                   alt='logo'
-                  className='rounded-full bg-[#00000000] z-10 max-iphone:w-[300px] max-iphone:h-[320px] w-[400px] h-[400px]'
+                  width={400}
+                  height={400}
+                  className='rounded-full bg-[#00000000] z-10 max-iphone:w-[300px] max-iphone:h-[320px]'
                 />
               </animated.div>
             </section>

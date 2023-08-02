@@ -30,7 +30,10 @@ module.exports = {
       '2950': '29.5',
     },
     screens:{
-      'iphone': '376px',
+      'iphone': '426px',
+      'tablet': '769px',
+      'ipad': '1025px',
+      'desktop': '1440px',
     }
   },
   plugins: [],
