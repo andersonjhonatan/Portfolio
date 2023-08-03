@@ -33,20 +33,20 @@ const Certificate = () => {
   };
 
   return (
-    <div className='text-white w-full gap-8 justify-center flex items-center p-4 h-full'>
-      <section className=' flex-2 top-0 mb-8'>
+    <div className='text-white w-full gap-8 max-tablet:gap-2 justify-center flex items-center p-4 max-tablet:p-0 h-full'>
+      <section className=' flex-2 top-0 mb-8 max-ipad:hidden'>
         <p className='text-[20rem] text-[#3a3a3a79] font-thin '>&#123;</p>
       </section>
-      <section className='text-center flex flex-col items-center'>
-        <article className='flex justify-end mb-8'>
+      <section className='text-center flex flex-col items-center border max-tablet:h-full max-tablet:w-full'>
+        <article className='flex justify-end mb-8 max-tablet:mb-3'>
           <b className='bg-[#21d19f] text-black w-4 h-4 mt-3 mr-3 flex justify-center text-start pb-4 text-xs rounded-full absolute '>{certifications.length}</b>
-          <h1 className='text-3xl p-4 z-00'>
+          <h1 className='text-3xl p-4 z-00 max-tablet:text-xl'>
             Certificates<span className='text-[#21d19f] text-2xl'>.</span>
           </h1>
         </article>
         <section className='flex items-center justify-around gap-4'>
           <motion.ul
-            className='grid grid-cols-3 gap-2 ml-3'
+            className='grid grid-cols-3 max-tablet:flex max-tablet:justify-center max-tablet:flex-wrap gap-2 ml-3 max-tablet:ml-0'
             variants={container}
             initial='hidden'
             animate='visible'
@@ -54,7 +54,7 @@ const Certificate = () => {
             {active &&
               certifications.map(({ id, photo }: SkillCertification) => (
                 <motion.li
-                  className='cursor-zoom-in item '
+                  className='cursor-zoom-in item'
                   key={id}
                   variants={item}
                   whileHover={{ scale: 0.9}}
@@ -65,21 +65,13 @@ const Certificate = () => {
                     width={200}
                     height={200}
                     alt={photo}
-                    className='rounded-md duration-300 ease-in w-full '
+                    className='rounded-md duration-300 ease-in w-full max-tablet:w-[120px]'
                   />
                 </motion.li>
               ))}
           </motion.ul>
-          {/*   <section className='flex flex-col items-center  border-[1px] border-[#303030ac] gap-24 bg-[#08080842] p-2 rounded-full'>
-            <article className='flex text-4xl hover:text-2xl transition-all text-[#ffffff] cursor-pointer'>
-              &#5169;
-            </article>
-            <article className='text-4xl hover:text-2xl transition-all rotate-180 text-[#ffffff] cursor-pointer'>
-              &#5169;
-            </article>
-          </section> */}
         </section>
-        <section className='flex mb-12 mt-2'>
+        <section className='flex mb-12 mt-2 max-tablet:mb-2'>
           <h1 className='text-sm  justify-center items-center text-gray-500'>
             <span className='text-[#21d19f] text-2xl'>*</span> Para acessar o Zoom, clique no certificado.
           </h1>
