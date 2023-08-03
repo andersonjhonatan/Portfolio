@@ -61,7 +61,7 @@ const Hello: React.FC = () => {
         <motion.p className='text-[26rem] text-[#3a3a3a79] font-thin'>&#123;</motion.p>
       </section>
       <section className='gap-8 flex flex-col max-tablet:gap-4'>
-        <motion.h1 className='sm:text-4xl text-center max-tablet:text-4xl'>
+        <motion.h1 className='text-4xl text-center max-tablet:text-4xl'>
           <strong className='text-[#21D19F]'>{title}</strong> Anderson
         </motion.h1>
         <motion.p className='mt-6 text-center text-lg break-all indent-4  mr-4'>
@@ -69,7 +69,7 @@ const Hello: React.FC = () => {
           web envolventes e completas. Sou apaixonado por desenvolver experiências web excepcionais, combinando
           criatividade e funcionalidade para alcançar resultados significativos.
         </motion.p>
-          <motion.p className='mt-8 text-center'>
+          <motion.p className='mt-6 text-center'>
             Vamos construir algo incrível juntos{' '}
             <motion.span style={{ fontSize: '2rem' }} className='text-[#21D19F] text-sm'>
               !
