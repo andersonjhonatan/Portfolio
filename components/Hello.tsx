@@ -64,7 +64,7 @@ const Hello: React.FC = () => {
         <motion.h1 className='text-4xl text-center max-tablet:text-4xl max-iphone:text-2xl'>
           <strong className='text-[#21D19F]'>{title}</strong> Anderson
         </motion.h1>
-        <motion.p className='mt-6 text-center text-lg break-all indent-4  mr-4 max-iphone:mt-4'>
+        <motion.p className='mt-6 text-center text-lg break-all indent-4  mr-4 max-iphone:mt-4 max-iphone:mr-0 max-iphone:text-start'>
           <strong className='text-[#21D19F]'>{desenvolvedor}</strong>, especializado em criar soluções
           web envolventes e completas. Sou apaixonado por desenvolver experiências web excepcionais, combinando
           criatividade e funcionalidade para alcançar resultados significativos.
