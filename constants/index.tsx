@@ -15,6 +15,7 @@ import {GrMysql} from 'react-icons/gr';
 import {BsBootstrap} from 'react-icons/bs';
 import { SkillCertification } from '@/types/certification';
 import { Work } from '@/types/workTypes';
+import {LiaDiscord} from 'react-icons/lia';
 
 
 export const headerProps = {
@@ -32,7 +33,9 @@ export const MainProps = {
 };
 
 export const icons = [
-  <PiTiktokLogoLight key="tiktok" className='w-8 h-8 hover:animate-pulse hover:cursor-pointer hover:text-[#21D19F]' />,
+  <Link target='_blank' key="tiktok" href='https://discord.gg/sGaDK3zz'>
+    <LiaDiscord key="discord" className='w-8 h-8 hover:animate-pulse hover:cursor-pointer hover:text-[#21D19F]' />
+  </Link>,
   <Link href='https://github.com/andersonjhonatan' target='_blank' key="github">
     <PiGithubLogoLight className='w-8 h-8 hover:animate-pulse hover:text-[#21D19F]' />
   </Link>,
