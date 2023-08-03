@@ -32,7 +32,7 @@ module.exports = {
     screens:{
       'iphone': '426px',
       'tablet': '769px',
-      'ipad': '1025px',
+      'ipad': '1220px', //1025
       'desktop': '1440px',
     }
   },

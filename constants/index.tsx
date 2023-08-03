@@ -42,10 +42,10 @@ export const icons = [
   <Link href='https://api.whatsapp.com/send?phone=5583993595471' target='_blank' key="whatsapp">
     <PiWhatsappLogoLight key="whatsapp" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse'/>
   </Link>,
-  <Link href='https://www.linkedin.com/in/anderson-jhonatan/' key="linkedin">
+  <Link href='https://www.linkedin.com/in/anderson-jhonatan/' key="linkedin" target='_blank'>
     <PiLinkedinLogoLight className='w-8 h-8 hover:text-[#21D19F] hover:animate-pulse' />
   </Link>,
-  <Link href='https://www.instagram.com/_anderson.jhonatan/' key="instagram">
+  <Link href='https://www.instagram.com/_anderson.jhonatan/' key="instagram" target='_blank'>
     <PiInstagramLogoLight key="instagram" className='w-8 h-8 hover:text-[#21D19F] hover:cursor-pointer hover:animate-pulse' />
   </Link>
 ];

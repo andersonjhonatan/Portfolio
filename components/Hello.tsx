@@ -57,11 +57,11 @@ const Hello: React.FC = () => {
       exit={{ x: '100%', opacity: 0 }}
       transition={{ duration: 0.5, ease: 'linear' }}
     >
-      <section>
+      <section className='max-tablet:hidden'>
         <motion.p className='text-[26rem] text-[#3a3a3a79] font-thin'>&#123;</motion.p>
       </section>
-      <section className='gap-8 flex flex-col'>
-        <motion.h1 className='sm:text-4xl text-center'>
+      <section className='gap-8 flex flex-col max-tablet:gap-4'>
+        <motion.h1 className='sm:text-4xl text-center max-tablet:text-4xl'>
           <strong className='text-[#21D19F]'>{title}</strong> Anderson
         </motion.h1>
         <motion.p className='mt-6 text-center text-lg break-all indent-4  mr-4'>
