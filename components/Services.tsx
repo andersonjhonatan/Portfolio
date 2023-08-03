@@ -12,7 +12,7 @@ const Services = (props: Props) => {
     to: { opacity: 1 },
   });
   return (
-    <div className='text-white justify-center flex items-center  h-full max-ipad:w-full'>
+    <div className='text-white justify-center flex items-center  h-full max-ipad:w-full max-tablet:w-full '>
       <section className=' mt-14 max-ipad:hidden'>
         <animated.p
           style={fadeAnimation}
@@ -22,18 +22,18 @@ const Services = (props: Props) => {
         </animated.p>
       </section>
 
-      <section className='ml-8 max-ipad:ml-0 max-ipad:w-full max-ipad:h-full max-ipad:flex max-ipad:justify-center flex max-ipad:items-center items-center flex-col gap-8 max-ipad:gap-8 '>
-        <h1 className='text-3xl mb-8 max-ipad:mb-0'>Serviços<span className='text-[#21d19f] text-2xl'> .</span></h1>
+      <section className='ml-8 max-ipad:ml-0 max-ipad:w-full max-ipad:h-full max-ipad:flex max-ipad:justify-center flex max-ipad:items-center items-center flex-col gap-8 max-tablet:gap-0 max-ipad:gap-8 max-tablet:w-full max-tablet:ml-0'>
+        <h1 className='text-3xl mb-8 max-ipad:mb-0 max-tablet:text-2xl max-tablet:my-2'>Serviços<span className='text-[#21d19f] text-2xl'> .</span></h1>
         <section className='flex gap-2 max-ipad:w-full'>
 
-          <article className='gap-4 flex flex-col bg-[#080808] p-4 rounded-sm w-60 border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation'>
-            <span className='text-5xl folder rounded-sm'>
+          <article className='gap-4 flex flex-col bg-[#080808] p-4 max-tablet:p-2 rounded-sm w-60 border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation'>
+            <span className='text-5xl folder rounded-sm max-tablet:text-3xl'>
               <LuFolderGit2 />
             </span>
-            <h1 className='cursor-default font-extrabold'>
+            <h1 className='cursor-default font-extrabold '>
               Desenvolvimento
               <span
-                className='text-[#21d19f] text-2xl
+                className='text-[#21d19f] text-2xl  max-tablet:text-xl
           '
               >
                 .
@@ -45,14 +45,14 @@ const Services = (props: Props) => {
             </p>
           </article>
 
-          <article className='gap-4 flex flex-col bg-[#080808] p-4 rounded-sm w-60 border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation'>
-            <span className='text-5xl folder rounded-sm'>
+          <article className=' gap-4 flex flex-col bg-[#080808] p-4 max-tablet:p-2  rounded-sm w-60 border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation'>
+            <span className='text-5xl folder rounded-sm max-tablet:text-3xl'>
               <HiOutlineDeviceMobile />
             </span>
             <h1 className='cursor-default font-extrabold'>
               Montion
               <span
-                className='text-[#21d19f] text-2xl
+                className='text-[#21d19f] text-2xl  max-tablet:text-xl
           '
               >
                 .
@@ -63,15 +63,14 @@ const Services = (props: Props) => {
             </p>
           </article>
 
-          <article className='gap-4 flex flex-col bg-[#080808] p-4 rounded-sm w-60 border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation'>
-            <span className='text-5xl folder rounded-sm font-thin'>
+          <article className='gap-4 flex flex-col bg-[#080808] p-4 max-tablet:p-2  rounded-sm w-60 border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation'>
+            <span className='text-5xl folder rounded-sm font-thin max-tablet:text-3xl'>
               <TiDeviceDesktop />
             </span>
             <h1 className='cursor-default font-extrabold'>
               Analista de sistema
               <span
-                className='text-[#21d19f] text-2xl
-          '
+                className='text-[#21d19f] text-2xl max-tablet:text-xl'
               >
                 .
               </span>
