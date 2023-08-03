@@ -51,7 +51,7 @@ const Hello: React.FC = () => {
 
   return (
     <motion.div
-      className='text-white ml-24 w-full gap-4 h-full justify-center flex items-center max-ipad:ml-0'
+      className='text-white ml-24 w-full max-iphone:w-11/12 gap-4 h-full justify-center flex items-center max-ipad:ml-0'
       initial={{ x: '-100%', opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: '100%', opacity: 0 }}
@@ -60,18 +60,18 @@ const Hello: React.FC = () => {
       <section className='max-tablet:hidden'>
         <motion.p className='text-[26rem] text-[#3a3a3a79] font-thin'>&#123;</motion.p>
       </section>
-      <section className='gap-8 flex flex-col max-tablet:gap-4'>
-        <motion.h1 className='text-4xl text-center max-tablet:text-4xl'>
+      <section className='gap-8 flex flex-col max-tablet:gap-4 max-iphone:gap-2 max-iphone:mt-3'>
+        <motion.h1 className='text-4xl text-center max-tablet:text-4xl max-iphone:text-2xl'>
           <strong className='text-[#21D19F]'>{title}</strong> Anderson
         </motion.h1>
-        <motion.p className='mt-6 text-center text-lg break-all indent-4  mr-4'>
+        <motion.p className='mt-6 text-center text-lg break-all indent-4  mr-4 max-iphone:mt-4'>
           <strong className='text-[#21D19F]'>{desenvolvedor}</strong>, especializado em criar soluções
           web envolventes e completas. Sou apaixonado por desenvolver experiências web excepcionais, combinando
           criatividade e funcionalidade para alcançar resultados significativos.
         </motion.p>
           <motion.p className='mt-6 text-center'>
-            Vamos construir algo incrível juntos{' '}
-            <motion.span style={{ fontSize: '2rem' }} className='text-[#21D19F] text-sm'>
+            <span className='max-iphone:text-2xl text-[#21D19F]'>V</span>amos construir algo incrível juntos{' '}
+            <motion.span style={{ fontSize: '2rem' }} className='text-[#21D19F] max-iphone:text-base text-sm'>
               !
             </motion.span>
           </motion.p>

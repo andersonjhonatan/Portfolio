@@ -37,7 +37,7 @@ const Certificate = () => {
       <section className=' flex-2 top-0 mb-8 max-ipad:hidden'>
         <p className='text-[20rem] text-[#3a3a3a79] font-thin '>&#123;</p>
       </section>
-      <section className='text-center flex flex-col items-center border max-tablet:h-full max-tablet:w-full'>
+      <section className='text-center flex flex-col items-center  max-tablet:h-full max-tablet:w-full'>
         <article className='flex justify-end mb-8 max-tablet:mb-3'>
           <b className='bg-[#21d19f] text-black w-4 h-4 mt-3 mr-3 flex justify-center text-start pb-4 text-xs rounded-full absolute '>{certifications.length}</b>
           <h1 className='text-3xl p-4 z-00 max-tablet:text-xl'>
