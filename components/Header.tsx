@@ -15,9 +15,9 @@ const Header: React.FC<IHeaderProps> = ({ Hello, services, work }) => {
   };
 
   return (
-    <header className='flex items-center justify-around  mt-8 relative z-40'>
+    <header className='flex items-center justify-around  mt-12 max-ipad:mt-8 relative z-40'>
       <section className='flex items-center justify-around max-ipad:gap-16 text-white flex-wrap-reverse absolute z-40 w-screen'>
-        <h1 className='text-2xl max-iphone:text-xl'>
+        <h1 className='text-2xl max-iphone:text-xl max-ipad:text-xl'>
           Anderson{' '}
           <span className='text-[#21D19F] bg-slate-900  max-iphone:p-1 p-2 rounded-lg animate-pulse'>
             J.

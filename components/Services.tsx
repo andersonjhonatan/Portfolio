@@ -22,7 +22,7 @@ const Services = (props: Props) => {
         </animated.p>
       </section>
 
-      <section className='ml-8 max-ipad:ml-0 max-ipad:w-full max-ipad:h-full max-ipad:flex max-ipad:justify-center flex max-ipad:items-center items-center flex-col gap-8 max-ipad:gap-8 border border-orange-500'>
+      <section className='ml-8 max-ipad:ml-0 max-ipad:w-full max-ipad:h-full max-ipad:flex max-ipad:justify-center flex max-ipad:items-center items-center flex-col gap-8 max-ipad:gap-8 '>
         <h1 className='text-3xl mb-8 max-ipad:mb-0'>Serviços<span className='text-[#21d19f] text-2xl'> .</span></h1>
         <section className='flex gap-2 max-ipad:w-full'>
 

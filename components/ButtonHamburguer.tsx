@@ -13,7 +13,7 @@ const {show, handleClick} = useContext(ScrollContext);
 
   return (
     <button
-    className='grid grid-cols-3 h-10 w-10 text-white rounded justify-center items-center group ipad:hidden'
+    className='grid grid-cols-3 h-10 w-10 max-ipad:w-6 max-ipad:h-6 text-white rounded justify-center items-center group ipad:hidden'
     onClick={handleButtonClick}
   >
     <div

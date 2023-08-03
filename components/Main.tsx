@@ -7,10 +7,8 @@ import { createContext } from 'react';
 import Scroll from './Scroll';
 import Aside from './Aside';
 import { useSpring, animated } from 'react-spring';
-import Developer from '@/components/animation/Developer';
 import Header from './Header';
-import { headerProps, MainProps } from '@/constants';
-import BoxAnimation from './animation/boxAnimation';
+import { headerProps } from '@/constants';
 
 export type IScrollContext = {
   show: boolean;
@@ -53,7 +51,6 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
     <ScrollContext.Provider value={scrollContextValue}>
       <Header {...headerProps} />
       <main className='flex items-center  h-screen  justify-center w-screen mt-10 transition-all max-iphone:flex-col max-iphone:w-[100%]'>
-        {!show && <Developer />}
         <div className='flex items-center  max-iphone:flex-col justify-center z-0 h-full w-[90%] max-iphone:w-[100%]'>
           <section className='flex-auto w-[30%] max-iphone:w-full flex flex-col justify-center items-center pt-16 max-iphone:pt-4'>
             <section className='bg-black border-4 border-[#21d19f] rounded-full align-bottom flex justify-end items-end flex-col'>
