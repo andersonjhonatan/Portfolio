@@ -22,10 +22,10 @@ const Skills: React.FC = () => {
       <section className='mr-8 max-ipad:hidden'>
         <p className='text-[25rem] text-[#3a3a3a79] font-thin '>&#123;</p>
       </section>
-      <h1 className='text-3xl mt-6 max-ipad:mt-0 max-ipad:mb-2 max-ipad:text-2xl tablet:hidden'>
+      <h1 className='text-3xl mt-6 max-ipad:mt-0 max-ipad:mb-2 max-ipad:text-2xl tablet:hidden max-iphone:text-lg'>
         Skills<span className='text-[#21d19f] text-2xl max-ipad:text-lg'>.</span>
       </h1>
-      <section className='flex flex-col h-full items-center gap-3 max-tablet:gap-0 p-4 max-tablet:p-0 max-tablet:justify-between max-ipad:gap-1 max-ipad:h-full max-ipad:w-full max-ipad:justify-center max-tablet:flex max-tablet:flex-row '>
+      <section className='flex flex-col h-full items-center gap-3 max-tablet:gap-0 p-4 max-tablet:p-0 max-tablet:justify-between max-ipad:gap-1 max-ipad:h-full max-ipad:w-full max-ipad:justify-center max-tablet:flex max-tablet:flex-row max-iphone:flex-col'>
         <h1 className='text-3xl mt-6 max-ipad:mt-0 max-ipad:mb-2 max-ipad:text-2xl  max-tablet:hidden'>
           Skills<span className='text-[#21d19f] text-2xl max-ipad:text-lg'>.</span>
         </h1>
@@ -34,7 +34,7 @@ const Skills: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className='grid grid-cols-4 gap-2 max-tablet:gap-1 text-center p-2 max-ipad:p-0  max-tablet:h-full max-tablet:w-80 max-tablet:place-content-center'
+          className='grid grid-cols-4 gap-2 max-tablet:gap-1 text-center p-2 max-ipad:p-0  max-tablet:h-full max-tablet:w-80 max-tablet:place-content-center max-iphone:p-1'
         >
           {sectionsSkills.map(
             ({ name, active, id }: Skill) =>
@@ -47,7 +47,7 @@ const Skills: React.FC = () => {
                   transition={{ duration: 0.5, delay: (id as number) * 0.3 }}
                 >
                   <motion.div
-                    className='text-[#21d19fbd] hover:text-[#21d19f] border border-[#111111] hover:border-[#21d19f] duration-300 delay-150 ease-in  bg-[#080808] rounded-sm text-4xl p-8 max-ipad:p-5 max-tablet:p-2 max-tablet:text-4xl max-tablet:flex max-tablet:justify-center'
+                    className='text-[#21d19fbd] hover:text-[#21d19f] border border-[#111111] hover:border-[#21d19f] duration-300 delay-150 ease-in  bg-[#080808] border rounded-sm text-4xl max-iphone:text-2xl p-8 max-ipad:p-5 max-tablet:p-2 max-tablet:text-4xl max-tablet:flex max-tablet:justify-center '
                     whileHover={{ scale: 0.9 }}
                     transition={{ duration: 0.1 }}
                     onMouseEnter={() => setSelectedId(id as number)}
@@ -66,14 +66,14 @@ const Skills: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className=' flex items-center text-center p-2 max-w-sm max-ipad:w-8/12 justify-center max-tablet:w-3/6 max-tablet:ml-2 max-tablet:flex-col max-tablet:gap-4'
+              className=' flex items-center text-center p-2 max-w-sm max-ipad:w-8/12 justify-center max-tablet:w-3/6 max-tablet:ml-2 max-tablet:flex-col max-tablet:gap-4 max-iphone:w-full max-iphone:items-center max-iphone:flex'
             >
-              <section className='sm:w-2/3 items-center flex justify-center gap-1 max-tablet:mr-4 tablet:hidden'>
+              <section className='sm:w-2/3 items-center flex justify-center gap-1 max-tablet:mr-4 tablet:hidden max-iphone:w-full'>
                 <p className='text-[#21d19f] text-lg'>*</p>
                 <p className='text-[#727272] max-tablet:hidden'>
                   Passe o mouse sobre as Skills
                 </p>
-                <p className='text-[#727272] tablet:hidden'>
+                <p className='text-[#727272] tablet:hidden max-iphone:text-xs'>
                   Clique para ver os detalhes
                 </p>
               </section>
@@ -86,7 +86,7 @@ const Skills: React.FC = () => {
                 className='flex justify-center items-center w-full p-2 border border-[#111111] rounded-sm'
               >
                 <motion.div
-                  className='text-[#21d19f9a] border border-[#111111] duration-300 delay-150 ease-in bg-[#080808] rounded-sm text-4xl p-3 max-ipad:text-2xl  max-ipad:p-1'
+                  className='text-[#21d19f9a] border border-[#111111] duration-300 delay-150 ease-in bg-[#080808] rounded-sm text-4xl p-3 max-ipad:text-2xl  max-ipad:p-1 max-iphone:text-xl'
                   transition={{ duration: 0.1 }}
                   onClick={() => setSelectedId(null)}
                 >

@@ -40,7 +40,7 @@ const Work = () => {
         animate='visible'
         className='flex flex-col h-full text-center gap-2 w-full ml-4 max-ipad:ml-0 max-ipad:max-h-full max-tablet:flex-row max-smiphone:flex-col max-smiphone:gap-1 max-smiphone:justify-center max-smiphone:h-full'
       >
-        <h1 className='text-3xl my-3 max-ipad:my-1 max-ipad:text-xl max-tablet:hidden max-smiphone:my-0  '>
+        <h1 className='text-2xl my-2 max-ipad:my-1 max-ipad:text-xl max-tablet:hidden max-smiphone:my-0  '>
           Projects<span className='text-[#21d19f] text-2xl'>.</span>
         </h1>
         {work.map((item) => (
@@ -62,7 +62,7 @@ const Work = () => {
                 height={400}
                 className=' object-cover max-ipad:object-contain rounded-lg max-ipad:w-full max-ipad:h-full max-smiphone:object-container max-smiphone:h-2/3 max-smiphone:2/3'
               />
-                <article className='gap-5 flex max-tablet:gap-2 max-smiphone:visible max-smiphone:gap-0 max-smiphone:justify-around'>
+                <article className='gap-5 flex max-tablet:gap-2 max-smiphone:visible max-smiphone:gap-0 max-smiphone:justify-around iphone:hidden'>
                 <Link
                   href={item.linkGit}
                   target='_blank'
