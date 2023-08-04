@@ -90,12 +90,14 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
                 )}
               </animated.div>
             </section>
-            {!show && (
-            <aside className=''>
+          { 
+            !show && 
+            <aside>
               <Aside />
             </aside>
+          }
               
-            )}
+          
           </section>
           {show && (
             <Scroll

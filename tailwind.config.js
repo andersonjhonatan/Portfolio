@@ -30,6 +30,7 @@ module.exports = {
       '2950': '29.5',
     },
     screens:{
+      'smiphone': '376px',
       'iphone': '426px',
       'tablet': '768px',
       'ipad': '1220px', //1025
