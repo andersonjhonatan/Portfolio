@@ -76,7 +76,7 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
                       alt='logo'
                       width={400}
                       height={400}
-                      className='rounded-full bg-[#00000000] z-10 max-iphone:w-[150px] max-iphone:h-[150px] '
+                      className='rounded-full bg-[#00000000] z-10 max-iphone:w-[150px] max-iphone:h-[150px] max-smiphone:w-[100px] max-smiphone:h-[100px]'
                     />
                   </>
                 ) : (
