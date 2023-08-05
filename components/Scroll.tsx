@@ -126,7 +126,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
             <animated.li
               style={IconAnimation(visibleItems.hello)}
               className='bg-[#21D19F] transition-all flex
-        justify-center rotate-[-15deg]  max-iphone:rotate-0 max-tablet:rotate-0 rounded-sm text-lg py-1 max-iphone:px-2 max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] tablet:border-r-[#21d19f] max-tablet:border-r-[1px] max-iphone:text-base max-tablet:justify-center max-smiphone:text-xs max-iphone:pr-2  max-tablet:px-4 max-tablet:text-sm'
+        justify-center rotate-[-15deg]  max-iphone:rotate-0 max-tablet:rotate-0  rounded-sm text-lg py-1 max-iphone:px-2 max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] tablet:border-r-[#21d19f] max-tablet:border-r-[1px] max-iphone:text-sm max-tablet:justify-center max-smiphone:text-xs max-iphone:pr-2  max-tablet:px-4 max-tablet:text-sm'
             >
               {Hello}
             </animated.li>
@@ -136,7 +136,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
             <animated.li
               style={IconAnimation(visibleItems.hello)}
               className=' transition-all flex
-        justify-start  pl-6 max-iphone:pl-2 rotate-[-15deg]  max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2  max-iphone:rotate-0 max-tablet:rotate-0 max-tablet:flex max-tablet:px-4 max-tablet:justify-center max-tablet:items-center max-tablet:text-center  rounded-sm text-lg max-tablet:text-sm'
+        justify-start  pl-6 max-iphone:pl-2 rotate-[-15deg]  max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-sm max-smiphone:text-xs max-iphone:pr-2  max-iphone:rotate-0 max-tablet:rotate-0  max-tablet:flex max-tablet:px-4 max-tablet:justify-center max-tablet:items-center max-tablet:text-center  rounded-sm text-lg max-tablet:text-sm'
             >
               {Hello}
             </animated.li>
@@ -146,7 +146,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
           <Link href='#services' onClick={handleClickServices}>
             <animated.li
               style={IconAnimation(visibleItems.services)}
-              className='bg-[#21D19F] py-1 flex transition-all rounded-sm rotate-[-10deg]  max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2 max-smiphone:px-2  max-iphone:rotate-0 max-tablet:rotate-0 px-8 max-iphone:px-0 ml-2 max-tablet:ml-0 max-iphone:-ml-0 items-center justify-center text-lg '
+              className='bg-[#21D19F] py-1 flex transition-all rounded-sm rotate-[-10deg]  max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-sm max-smiphone:text-xs max-iphone:pr-2 max-smiphone:px-2  max-iphone:rotate-0 max-tablet:rotate-0  max-tablet:text-sm px-8 max-iphone:px-0 ml-2 max-tablet:ml-0 max-iphone:-ml-0 items-center justify-center text-lg '
             >
               {Services}
             </animated.li>
@@ -155,7 +155,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
           <Link href='#services' onClick={handleClickServices}>
             <animated.li
               style={IconAnimation(visibleItems.services)}
-              className='hover:bg-[#36363644] transition-all hover:rounded-sm rotate-[-10deg]  max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-base max-smiphone:text-xs max-iphone:px-2  max-iphone:rotate-0 max-tablet:rotate-0 rounded-sm  ml-4 max-iphone:ml-0 max-tablet:ml-0 px-6  items-center justify-center text-lg hover:justify-center hover:items-center hover:text-center hover:flex'
+              className='hover:bg-[#36363644] transition-all hover:rounded-sm rotate-[-10deg]  max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-sm max-smiphone:text-xs max-iphone:px-2  max-iphone:rotate-0 max-tablet:rotate-0  max-tablet:text-sm rounded-sm  ml-4 max-iphone:ml-0 max-tablet:ml-0 px-6  items-center justify-center text-lg hover:justify-center hover:items-center hover:text-center hover:flex'
             >
               {Services}
             </animated.li>
@@ -165,7 +165,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
           <Link href='#Work' onClick={handleClickWork}>
             <animated.li
               style={IconAnimation(visibleItems.work)}
-              className='bg-[#21D19F] py-1 transition-all rounded-sm px-6 max-iphone:px-0 max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] tablet:border-r-[#21d19f] max-tablet:border-r-[1px]   max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2 items-center justify-center text-lg max-smiphone:px-2'
+              className='bg-[#21D19F] py-1 transition-all rounded-sm px-6 max-iphone:px-0 max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] tablet:border-r-[#21d19f] max-tablet:border-r-[1px]   max-iphone:text-sm  max-tablet:text-sm max-smiphone:text-xs max-iphone:pr-2 items-center justify-center text-lg max-smiphone:px-2'
             >
               {Work}
             </animated.li>
@@ -174,7 +174,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
           <Link href='#Work' onClick={handleClickWork}>
             <animated.li
               style={IconAnimation(visibleItems.work)}
-              className='hover:bg-[#36363644] transition-all hover:rounded-sm flex pl-2 justify-center text-lg max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] tablet:border-r-[#21d19f] max-tablet:border-r-[1px]  max-iphone:text-base max-smiphone:text-xs max-iphone:flex max-iphone:justify-center max-iphone:pl-2 max-smiphone:pr-2 max-tablet:border-[#21d19f] max-tablet:border-[1px] max-tablet:px-2 rounded-sm'
+              className='hover:bg-[#36363644] transition-all hover:rounded-sm flex pl-2 justify-center text-lg max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] tablet:border-r-[#21d19f] max-tablet:border-r-[1px]  max-iphone:text-sm max-smiphone:text-xs  max-tablet:text-sm max-iphone:flex max-iphone:justify-center max-iphone:pl-2 max-smiphone:pr-2 max-tablet:border-[#21d19f] max-tablet:border-[1px] max-tablet:px-2 rounded-sm'
             >
               {Work}
             </animated.li>
@@ -184,7 +184,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
           <Link href='#skills' onClick={handleClickSkills}>
             <animated.li
               style={IconAnimation(visibleItems.skills)}
-              className='rotate-[10deg]   max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2 max-iphone:rotate-0 max-tablet:rotate-0 rounded-sm py-1 bg-[#21D19F] transition-all  text-lg max-smiphone:px-2 max-tablet:px-4'
+              className='rotate-[10deg]   max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-sm max-smiphone:text-xs max-iphone:pr-2 max-iphone:rotate-0 max-tablet:rotate-0  max-tablet:text-sm rounded-sm py-1 bg-[#21D19F] transition-all  text-lg max-smiphone:px-2 max-tablet:px-4'
             >
               {Skills}
             </animated.li>
@@ -193,7 +193,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
           <Link href='#skills' onClick={handleClickSkills}>
             <animated.li
               style={IconAnimation(visibleItems.skills)}
-              className='rotate-[10deg]   max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2 max-iphone:rotate-0 max-tablet:rotate-0  hover:bg-[#36363644] transition-all hover:rounded-sm text-lg max-tablet:px-2 items-center rounded-sm'
+              className='rotate-[10deg]   max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-sm max-smiphone:text-xs max-iphone:pr-2 max-iphone:rotate-0 max-tablet:rotate-0  max-tablet:text-sm  hover:bg-[#36363644] transition-all hover:rounded-sm text-lg max-tablet:px-2 items-center rounded-sm'
             >
               {Skills}
             </animated.li>
@@ -203,7 +203,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
           <Link href='#certificates' onClick={handleClickCertificates}>
             <animated.li
               style={IconAnimation(visibleItems.certificates)}
-              className='bg-[#21D19F] transition-all py-1 rotate-[15deg]  max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2  max-iphone:rotate-0 max-tablet:rotate-0 rounded-sm  px-8 max-smiphone:px-2  items-center justify-center text-lg max-smiphone:flex-wrap'
+              className='bg-[#21D19F] transition-all py-1 rotate-[15deg]  max-iphone:text-sm max-smiphone:text-xs max-iphone:pr-2  max-iphone:rotate-0 max-tablet:rotate-0  max-tablet:text-sm rounded-sm  px-8 max-smiphone:px-2  items-center justify-center text-lg max-smiphone:flex-wrap'
             >
               {Certificates}
             </animated.li>
@@ -212,7 +212,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
           <Link href='#certificates' onClick={handleClickCertificates}>
             <animated.li
               style={IconAnimation(visibleItems.certificates)}
-              className='text-lg hover:bg-[#36363644] transition-all hover:rounded-sm rotate-[15deg]    max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2  max-iphone:rotate-0 max-tablet:rotate-0 rounded-sm flex justify-center pr-3 max-tablet:border-[#21d19f] max-tablet:border-[1px] max-tablet:px-2 items-center max-smiphone:flex-wrap'
+              className='text-lg hover:bg-[#36363644] transition-all hover:rounded-sm rotate-[15deg]    max-iphone:text-sm max-smiphone:text-xs max-iphone:pr-2  max-iphone:rotate-0 max-tablet:rotate-0  max-tablet:text-sm rounded-sm flex justify-center pr-3 max-tablet:border-[#21d19f] max-tablet:border-[1px] max-tablet:px-2 items-center max-smiphone:flex-wrap'
             >
               {Certificates}
             </animated.li>
