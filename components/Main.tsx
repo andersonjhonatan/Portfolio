@@ -87,7 +87,7 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
                     width={400}
                     height={400}
                     onClick={handleClick}
-                    className='cursor-pointer rounded-full bg-[#00000000] z-10 max-iphone:w-[400px] max-iphone:h-[400px] '
+                    className='cursor-pointer rounded-full bg-[#00000000] z-10 max-iphone:w-[300px] max-iphone:h-[320px] max-tablet:w-[360px] max-tablet:h-[360px] '
                   />
                 )}
               </animated.div>
