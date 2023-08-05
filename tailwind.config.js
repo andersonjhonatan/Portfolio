@@ -32,8 +32,8 @@ module.exports = {
     screens:{
       'smiphone': '376px',
       'iphone': '426px',
-      'tablet': '768px',
-      'ipad': '1220px', //1025
+      'tablet': '769px',
+      'ipad': '1025px', //1025
       'desktop': '1440px',
     }
   },

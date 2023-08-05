@@ -57,7 +57,7 @@ const Hello: React.FC = () => {
       exit={{ x: '100%', opacity: 0 }}
       transition={{ duration: 0.5, ease: 'linear' }}
     >
-      <section className='max-tablet:hidden'>
+      <section className='max-ipad:hidden'>
         <motion.p className='text-[26rem] text-[#3a3a3a79] font-thin'>&#123;</motion.p>
       </section>
       <section className='gap-8 flex flex-col max-tablet:gap-4 max-iphone:gap-2 max-iphone:mt-0'>

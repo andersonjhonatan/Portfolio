@@ -60,7 +60,7 @@ const Work = () => {
                 alt={item.name}
                 width={400}
                 height={400}
-                className=' object-cover max-ipad:object-contain rounded-lg max-ipad:w-full max-ipad:h-full max-smiphone:object-container max-smiphone:h-2/3 max-smiphone:2/3'
+                className=' object-cover max-ipad:object-contain rounded-lg max-ipad:w-full max-ipad:h-full max-smiphone:object-container max-smiphone:h-2/3 max-smiphone:2/3 '
               />
                 <article className='gap-5 flex max-tablet:gap-2 max-smiphone:visible max-smiphone:gap-0 max-smiphone:justify-around iphone:hidden'>
                 <Link

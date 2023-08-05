@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import { LuFolderGit2 } from 'react-icons/lu';
+import { LuFolder} from 'react-icons/lu';
 import {HiOutlineDeviceMobile} from 'react-icons/hi'; 
 import {TiDeviceDesktop} from 'react-icons/ti';
 
@@ -24,9 +24,9 @@ const Services = (props: Props) => {
 
       <section className='ml-8 max-ipad:ml-0 max-ipad:w-full max-ipad:h-full  max-ipad:flex max-ipad:justify-center flex max-ipad:items-center max-smiphone:justify-start items-center flex-col gap-8 max-tablet:gap-0 max-ipad:gap-8 max-smiphone:gap-2 max-smiphone:mt-0 max-tablet:w-full max-tablet:ml-0'>
         <h1 className='text-3xl mb-8 max-ipad:mb-0 max-tablet:text-2xl max-tablet:my-2 max-smiphone:my-1 max-smiphone:text-lg  max-smiphone:mt-3'>Serviços<span className='text-[#21d19f] text-2xl'> .</span></h1>
-        <section className='flex gap-2 max-ipad:w-full max-smiphone:gap-1 max-smiphone:flex-col'>
-          <article className='gap-4 flex flex-col bg-[#080808] p-4 max-tablet:p-2 rounded-sm w-60 max-smiphone:w-full border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation max-smiphone:gap-2 max-smiphone:flex-row'>
-            <span className='text-5xl folder rounded-sm max-tablet:text-3xl max-smiphone:text-xl max-smiphone:flex max-smiphone:items-center max-smiphone:flex-col-reverse max-smiphone:flex-auto max-smiphone:w-1/4 max-smiphone:justify-center'>
+        <section className='flex gap-2 max-ipad:w-full max-smiphone:gap-1 max-smiphone:flex-col max-ipad:gap-1 max-ipad:flex-col max-tablet:w-full'>
+          <article className='gap-4 max-ipad:w-full flex flex-col bg-[#080808] p-4 max-tablet:p-2 rounded-sm w-60 max-smiphone:w-full border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation max-smiphone:gap-2 max-smiphone:flex-row'>
+            <span className='text-5xl folder max-ipad:text-lg rounded-sm max-tablet:text-3xl max-smiphone:text-xl max-smiphone:flex max-smiphone:items-center max-smiphone:flex-col-reverse max-smiphone:flex-auto  max-smiphone:w-1/4 max-smiphone:justify-center'>
             <h1 className='cursor-default font-extrabold max-tablet:text-[10px] smiphone:hidden'>
               Desenvolver
               <span
@@ -36,9 +36,9 @@ const Services = (props: Props) => {
                 .
               </span>
             </h1>
-              <LuFolderGit2 />
+              <LuFolder />
             </span>
-            <h1 className='cursor-default font-extrabold max-tablet:text-[10px] flex max-smiphone:hidden '>
+            <h1 className='cursor-default font-extrabold max-tablet:text-[10px] flex max-smiphone:hidden  max-ipad:text-base'>
               Desenvolvimento
               <span
                 className='text-[#21d19f] text-2xl  max-tablet:text-xl max-smiphone:text-xs
@@ -47,14 +47,14 @@ const Services = (props: Props) => {
                 .
               </span>
             </h1>
-            <p className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0 max-smiphone:text-xs max-smiphone:flex max-smiphone:flex-auto max-smiphone:w-3/4'>
+            <p className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0 max-smiphone:text-xs max-smiphone:flex max-smiphone:flex-auto max-ipad:text-sm max-smiphone:w-3/4'>
               Desenvolvo sites profissionais, blogs, portfólios, landing pages e
               e-commerce
             </p>
           </article>
 
-          <article className=' gap-4 flex flex-col bg-[#080808] p-4 max-tablet:p-2  rounded-sm w-60 max-smiphone:w-full max-smiphone:flex-row border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation max-smiphone:gap-2'>
-            <span className='text-5xl folder rounded-sm max-tablet:text-3xl max-smiphone:text-xl max-smiphone:flex-auto max-smiphone:w-1/4 max-smiphone:flex  max-smiphone:items-center max-smiphone:flex-col-reverse'>
+          <article className=' gap-4  flex flex-col bg-[#080808] p-4 max-tablet:p-2  rounded-sm w-60 max-smiphone:w-full max-smiphone:flex-row border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation max-smiphone:gap-2 max-ipad:w-full'>
+            <span className='text-5xl folder max-ipad:text-lg rounded-sm max-tablet:text-3xl max-smiphone:text-xl max-smiphone:flex-auto  max-smiphone:w-1/4 max-smiphone:flex  max-smiphone:items-center max-smiphone:flex-col-reverse'>
             <h1 className='cursor-default font-extrabold max-tablet:text-xs smiphone:hidden max-tablet:text-[10px]'>
               Montion
               <span
@@ -75,13 +75,13 @@ const Services = (props: Props) => {
                 .
               </span>
             </h1>
-            <p  className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0 max-smiphone:text-xs max-smiphone:flex-auto max-smiphone:w-9/12'>
+            <p  className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0 max-smiphone:text-xs max-smiphone:flex-auto max-ipad:text-sm max-smiphone:w-9/12'>
             Crie engajamento com abordagens que emanem modernidade, cativando o usuário por meio de interações arrojadas e inovadoras
             </p>
           </article>
 
-          <article className='gap-4 flex flex-col bg-[#080808] p-4 max-tablet:p-2  rounded-sm w-60 max-smiphone:w-full max-smiphone:flex-row border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation max-smiphone:gap-2'>
-            <span className='text-5xl folder rounded-sm font-thin max-tablet:text-3xl max-smiphone:text-xl max-smiphone:flex max-smiphone:items-center max-smiphone:flex-auto max-smiphone:w-1/4 max-smiphone:justify-center max-smiphone:text-center max-smiphone:flex-col-reverse'>
+          <article className='gap-4 max-ipad:w-full flex flex-col bg-[#080808] p-4 max-tablet:p-2  rounded-sm w-60 max-smiphone:w-full max-smiphone:flex-row border border-black hover:border-green-300 transition-all duration-500 ease-in delay-150 article-animation max-smiphone:gap-2'>
+            <span className='text-5xl folder max-ipad:text-lg rounded-sm font-thin max-tablet:text-3xl max-smiphone:text-xl max-smiphone:flex max-smiphone:items-center max-smiphone:flex-auto max-smiphone:w-1/4 max-smiphone:justify-center max-smiphone:text-center max-smiphone:flex-col-reverse'>
             <h1 className='cursor-default font-extrabold max-tablet:text-xs  smiphone:hidden'>
               Analista de sistema
               <span
@@ -100,7 +100,7 @@ const Services = (props: Props) => {
                 .
               </span>
             </h1>
-            <p  className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0 max-smiphone:text-xs max-smiphone:flex-auto max-smiphone:w-3/4'>
+            <p  className='max-ipad:break-all max-ipad:text-justify max-ipad:inset-0 max-smiphone:text-xs max-smiphone:flex-auto max-ipad:text-sm max-smiphone:w-3/4 '>
             Como analista de sistemas, refine a arquitetura digital com soluções que sejam vanguardistas, capturando a atenção dos usuários e otimizando suas experiências.
             </p>
           </article>

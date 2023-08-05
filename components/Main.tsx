@@ -52,14 +52,14 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
       <Header {...headerProps} />
       <main className='flex items-center  h-screen  justify-center w-screen mt-10 transition-all max-tablet:flex-col max-tablet:flex max-iphone:w-[100%]'>
         <div className='flex items-center  max-tablet:flex-col justify-center z-0 h-full w-[90%] max-iphone:w-[100%]'>
-          <section className='flex-auto w-[30%] max-tablet:w-[40%] max-iphone:w-full flex flex-col justify-center items-center pt-16 max-iphone:pt-4'>
+          <section className='flex-auto w-[30%] max-tablet:w-[60%] max-iphone:w-full flex flex-col justify-center items-center pt-16 max-tablet:pt-0 max-iphone:pt-4'>
             <section className='bg-black border-4 border-[#21d19f] rounded-full align-bottom flex justify-end items-end flex-col'>
               {show ||
                 (isVisible && (
                   <>
                     <button
                       onClick={handleClick}
-                      className='text-white absolute left-0 right-0 m-auto p-2 rounded-3xl text-2xl w-40 animate-pulse z-50'
+                      className='text-[#21d19f82] absolute left-0 right-0 m-auto p-2 rounded-3xl text-sm w-40 animate-pulse z-50 overline'
                     >
                       {!show && 'Click Me'}
                     </button>
@@ -76,7 +76,8 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
                       alt='logo'
                       width={400}
                       height={400}
-                      className='rounded-full bg-[#00000000] z-10 max-iphone:w-[150px] max-iphone:h-[150px] max-smiphone:w-[100px] max-smiphone:h-[100px]'
+                      onClick={handleClick}
+                      className='cursor-pointer rounded-full bg-[#00000000] z-10 max-iphone:w-[150px] max-iphone:h-[150px] max-smiphone:w-[100px] max-smiphone:h-[100px] max-tablet:w-[250px] max-tablet:h-[250px]'
                     />
                   </>
                 ) : (
@@ -85,7 +86,8 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
                     alt='logo'
                     width={400}
                     height={400}
-                    className='rounded-full bg-[#00000000] z-10 max-iphone:w-[300px] max-iphone:h-[320px] '
+                    onClick={handleClick}
+                    className='cursor-pointer rounded-full bg-[#00000000] z-10 max-iphone:w-[300px] max-iphone:h-[320px] '
                   />
                 )}
               </animated.div>
