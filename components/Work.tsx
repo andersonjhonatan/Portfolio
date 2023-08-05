@@ -62,7 +62,7 @@ const Work = () => {
                 height={400}
                 className=' object-cover max-ipad:object-contain rounded-lg max-ipad:w-full max-ipad:h-full max-smiphone:object-container max-smiphone:h-2/3 max-smiphone:2/3 '
               />
-                <article className='gap-5 flex max-tablet:gap-2 max-smiphone:visible max-smiphone:gap-0 max-smiphone:justify-around iphone:hidden'>
+                <article className='gap-5 flex max-tablet:gap-2 max-smiphone:visible max-smiphone:gap-0 max-smiphone:justify-around smiphone:hidden '>
                 <Link
                   href={item.linkGit}
                   target='_blank'
@@ -103,7 +103,7 @@ const Work = () => {
                   <p className='max-tablet:text-xs max-smiphone:text-[10px]'>
                     <SiCodereview />
                   </p>
-                  <p className='max-tablet:text-xs  max-tablet:text-center max-smiphone:text-[6px]'>{item.github}</p>
+                  <p className='max-tablet:text-xs  max-tablet:text-center max-smiphone:text-[6px] max-iphone:hidden'>{item.github}</p>
                   
                 </Link>
                 <Link

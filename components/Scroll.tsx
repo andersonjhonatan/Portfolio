@@ -119,14 +119,14 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
     });
 
   return (
-    <div className=' flex p-4 justify-between items-center z-0 h-full w-4/5  flex-auto max-iphone:flex-col max-tab max-iphone:h-full  max-ipad:ml-2 max-ipad:w-4/5 max-tablet:w-full max-tablet:ml-0  max-iphone:mt-2 max-tablet:flex-col'>
-      <ul className='text-2xl gap-10 max-tablet:gap-2 transform flex flex-col text-white text-center p-4 max-iphone:w-full max-iphone:flex-row max-iphone:gap-2 max-iphone:mt-6 max-smiphone:gap-2 max-smiphone:justify-center max-iphone:p-2 max-iphone:text-lg max-smiphone:mt-2  max-tablet:w-full max-tablet:flex-row max-tablet:mt-2 max-tablet:flex max-tablet:justify-center max-tablet:items-baseline max-tablet:p-0'>
+    <div className=' flex p-4 justify-between items-center z-0 h-full w-4/5  flex-auto max-iphone:flex-col max-tab max-iphone:h-full max-ipad:ml-2 max-ipad:w-4/5 max-tablet:w-full max-tablet:ml-0  max-iphone:mt-2 max-tablet:flex-col'>
+      <ul className='text-2xl gap-10 max-tablet:gap-2 transform flex flex-col text-white text-center p-4 max-iphone:w-full max-iphone:flex-row max-iphone:gap-2 max-iphone:mt-6 max-smiphone:gap-2 max-smiphone:justify-center max-iphone:p-2 max-iphone:text-lg max-smiphone:mt-2  max-tablet:w-full max-tablet:flex-row max-tablet:mt-2 max-tablet:flex max-tablet:justify-center max-tablet:items-baseline max-tablet:p-0 '>
         {hello ? (
           <Link href='#hello' onClick={handleClickHello}>
             <animated.li
               style={IconAnimation(visibleItems.hello)}
               className='bg-[#21D19F] transition-all flex
-        justify-center rotate-[-15deg]  max-iphone:rotate-0 max-tablet:rotate-0 rounded-sm text-lg py-1 max-iphone:px-2 max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] tablet:border-r-[#21d19f] max-tablet:border-r-[1px] max-iphone:text-base max-tablet:justify-center max-smiphone:text-xs max-iphone:pr-2  max-tablet:px-4'
+        justify-center rotate-[-15deg]  max-iphone:rotate-0 max-tablet:rotate-0 rounded-sm text-lg py-1 max-iphone:px-2 max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] tablet:border-r-[#21d19f] max-tablet:border-r-[1px] max-iphone:text-base max-tablet:justify-center max-smiphone:text-xs max-iphone:pr-2  max-tablet:px-4 max-tablet:text-sm'
             >
               {Hello}
             </animated.li>
@@ -136,7 +136,7 @@ const Scroll: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
             <animated.li
               style={IconAnimation(visibleItems.hello)}
               className=' transition-all flex
-        justify-start  pl-6 max-iphone:pl-2 rotate-[-15deg]  max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2  max-iphone:rotate-0 max-tablet:rotate-0 max-tablet:flex max-tablet:px-4 max-tablet:justify-center max-tablet:items-center max-tablet:text-center  rounded-sm text-lg'
+        justify-start  pl-6 max-iphone:pl-2 rotate-[-15deg]  max-iphone:border-r-[#21d19f] max-iphone:border-r-[1px] max-tablet:border-[#21d19f] max-tablet:border-[1px]   max-iphone:text-base max-smiphone:text-xs max-iphone:pr-2  max-iphone:rotate-0 max-tablet:rotate-0 max-tablet:flex max-tablet:px-4 max-tablet:justify-center max-tablet:items-center max-tablet:text-center  rounded-sm text-lg max-tablet:text-sm'
             >
               {Hello}
             </animated.li>

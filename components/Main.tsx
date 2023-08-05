@@ -50,9 +50,9 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
   return (
     <ScrollContext.Provider value={scrollContextValue}>
       <Header {...headerProps} />
-      <main className='flex items-center  h-screen  justify-center w-screen mt-10 transition-all max-tablet:flex-col max-tablet:flex max-iphone:w-[100%]'>
-        <div className='flex items-center  max-tablet:flex-col justify-center z-0 h-full w-[90%] max-iphone:w-[100%]'>
-          <section className='flex-auto w-[30%] max-tablet:w-[60%] max-iphone:w-full flex flex-col justify-center items-center pt-16 max-tablet:pt-0 max-iphone:pt-4'>
+      <main className='flex items-center  h-screen  justify-center w-screen mt-10 transition-all max-tablet:flex-col max-tablet:flex max-iphone:w-[100%] '>
+        <div className='flex items-center  max-tablet:flex-col justify-center z-0 h-full w-[90%] max-iphone:w-[100%]  max-tablet:w-full'>
+          <section className='flex-auto w-[30%] max-tablet:w-[80%] max-iphone:w-full flex flex-col justify-center items-center pt-16 max-tablet:pt-0'>
             <section className='bg-black border-4 border-[#21d19f] rounded-full align-bottom flex justify-end items-end flex-col'>
               {show ||
                 (isVisible && (
@@ -87,14 +87,14 @@ const Main: FC<IMain> = ({ Hello, Services, Work, Skills, Certificates }) => {
                     width={400}
                     height={400}
                     onClick={handleClick}
-                    className='cursor-pointer rounded-full bg-[#00000000] z-10 max-iphone:w-[300px] max-iphone:h-[320px] max-tablet:w-[360px] max-tablet:h-[360px] '
+                    className='cursor-pointer rounded-full bg-[#00000000] z-10 max-tablet:w-[320px] max-tablet:h-[320px]'
                   />
                 )}
               </animated.div>
             </section>
           { 
             !show && 
-            <aside>
+            <aside >
               <Aside />
             </aside>
           }
