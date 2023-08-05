@@ -5,7 +5,7 @@ import { Skill } from '@/types/Skill';
 
 const Skills: React.FC = () => {
   const [showSkills, setShowSkills] = useState(false);
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState<number | null>(null);
 
   useEffect(() => {
     // Definimos um timer para mostrar as habilidades uma após a outra
