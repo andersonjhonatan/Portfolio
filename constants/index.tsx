@@ -83,11 +83,12 @@ export const sectionsSkills: Skill[] = [
 
 export const certifications: SkillCertification[] = [
   { id: 1, photo: 'certificados/faculdade2.png', active: true },
-  { id: 2, photo: 'certificados/faculdade1.png', active: true },
+  { id: 2, photo: 'certificados/backEnd.png', active: true },
   { id: 3, photo: 'certificados/fundamentos.png', active: true },
   { id: 4, photo: 'certificados/Front.png', active: true },
   { id: 5, photo: 'certificados/UC-2fdbb2be-e8e2-4969-9d9f-5ba8056150cc.jpg', active: true },
   { id: 6, photo: 'certificados/codesh.png', active: true },
+  { id: 7, photo: 'certificados/faculdade1.png', active: true },
 ]
 
 export const work: Work[] = [
