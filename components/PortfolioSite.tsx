@@ -33,6 +33,9 @@ import unidadeCurricular from '@/public/certificados/UC-2fdbb2be-e8e2-4969-9d9f-
 import estella from '@/public/projects/estella.png'
 import montagem from '@/public/projects/montagem.png'
 import tarefas from '@/public/projects/tarefas.png'
+import robloxAvatar from '@/public/projects/invitations/convite-roblox-avatar.png'
+import robloxIslands from '@/public/projects/invitations/convite-roblox-ilhas.png'
+import spiderManHero from '@/public/projects/invitations/convite-spiderman-hero.jpeg'
 
 const whatsappNumber = '5587991104152'
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá, Anderson. Vi seu portfólio e gostaria de conversar sobre um projeto.')}`
@@ -53,46 +56,64 @@ const certificates: Certificate[] = [
   { title: 'Formação acadêmica', category: 'Graduação', image: faculdade1 },
 ]
 
-const currentProjects = [
+type ProjectVisual = 'k2' | 'roblox' | 'minecraft' | 'spiderman'
+
+type CurrentProject = {
+  number: string
+  title: string
+  type: string
+  text: string
+  tags: string[]
+  href: string
+  tone: string
+  visual: ProjectVisual
+  image?: StaticImageData
+  character?: StaticImageData
+}
+
+const currentProjects: CurrentProject[] = [
   {
     number: '01',
-    code: 'K2',
     title: 'K2 Tech',
     type: 'Presença de marca',
     text: 'A estrutura digital da empresa: serviços, posicionamento e um portfólio para transformar conversas em oportunidades.',
     tags: ['Estratégia', 'Next.js', 'SEO'],
     href: 'https://github.com/andersonjhonatan/K2Tech',
     tone: 'project-panel--blue',
+    visual: 'k2',
   },
   {
     number: '02',
-    code: 'RBX',
     title: 'Convite Roblox',
     type: 'Experiência interativa',
     text: 'Uma jornada de aniversário pensada como jogo: entrada, universo visual e confirmação de presença com memória.',
     tags: ['Storytelling', 'Interação', 'Mobile'],
     href: 'https://github.com/andersonjhonatan/ConviteRoblox',
     tone: 'project-panel--pink',
+    visual: 'roblox',
+    image: robloxIslands,
+    character: robloxAvatar,
   },
   {
     number: '03',
-    code: 'MC',
     title: 'Convite Minecraft',
     type: 'Experiência interativa',
     text: 'Convite temático que transforma a expectativa pela festa em uma experiência antes mesmo do grande dia.',
     tags: ['UX', 'Design', 'Animação'],
     href: 'https://github.com/andersonjhonatan/Convite-Minecraft',
     tone: 'project-panel--green',
+    visual: 'minecraft',
   },
   {
     number: '04',
-    code: 'SP',
     title: 'Aniversário Spider-Man',
     type: 'Convite digital',
     text: 'Identidade infantil de alto impacto com entrada envolvente e uma linguagem feita para quem vai celebrar.',
     tags: ['Mobile first', 'Visual', 'Experiência'],
     href: 'https://github.com/andersonjhonatan/aniversario-spiderman',
     tone: 'project-panel--red',
+    visual: 'spiderman',
+    image: spiderManHero,
   },
 ]
 
@@ -246,8 +267,14 @@ export default function PortfolioSite() {
             <div className="project-panels">
               {currentProjects.map((project) => (
                 <article className={`project-panel ${project.tone}`} key={project.title}>
+                  <div className={`project-art project-art--${project.visual}`} aria-hidden="true">
+                    {project.image && <Image src={project.image} alt="" fill sizes="(max-width: 760px) 100vw, 50vw" />}
+                    {project.character && <Image className="project-art-character" src={project.character} alt="" fill sizes="(max-width: 760px) 55vw, 27vw" />}
+                    {project.visual === 'k2' && <><span className="k2-art-mark">K2</span><span className="k2-art-line k2-art-line--one" /><span className="k2-art-line k2-art-line--two" /><span className="k2-art-dot" /></>}
+                    {project.visual === 'minecraft' && <><span className="mc-sun" /><span className="mc-cloud mc-cloud--one" /><span className="mc-cloud mc-cloud--two" /><span className="mc-hill mc-hill--back" /><span className="mc-hill mc-hill--front" /><span className="mc-tree mc-tree--one" /><span className="mc-tree mc-tree--two" /><span className="mc-portal"><i /></span><span className="mc-block mc-block--one" /><span className="mc-block mc-block--two" /><span className="mc-block mc-block--three" /></>}
+                    {project.visual === 'spiderman' && <><span className="spider-dot-grid" /><span className="spider-signal">✦</span><span className="spider-web spider-web--one" /><span className="spider-web spider-web--two" /></>}
+                  </div>
                   <div className="panel-top"><span>{project.number}</span><span>{project.type}</span></div>
-                  <div className="project-code" aria-hidden="true">{project.code}</div>
                   <div className="panel-info"><h3>{project.title}</h3><p>{project.text}</p><div>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div>
                   <a href={project.href} target="_blank" rel="noreferrer" aria-label={`Abrir projeto ${project.title} no GitHub`}><FiArrowUpRight aria-hidden="true" /></a>
                 </article>
