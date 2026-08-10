@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anderson Jhonatan — CEO da K2 Tech
 
-## Getting Started
+Portfólio pessoal de Anderson Jhonatan, CEO e fundador da K2 Tech. O site apresenta a visão, o processo de trabalho, projetos selecionados e um contato direto pelo WhatsApp.
 
-First, run the development server:
+## O que foi atualizado
+
+- Reestruturação total da arquitetura e da apresentação visual.
+- Posicionamento como CEO e fundador da K2 Tech, em vez de um currículo técnico genérico.
+- Projetos reais organizados como portfólio de experiências digitais.
+- Design responsivo com identidade preto/grafite, azul elétrico e detalhes dourados.
+- Contato que inicia uma conversa no WhatsApp sem armazenar dados no site.
+- SEO básico: metadados, ícone, manifesto, `robots.txt` e sitemap.
+- Base técnica atualizada para Next.js 16 e React 19.
+
+## Tecnologias
+
+- Next.js 16
+- React 19
+- TypeScript
+- CSS responsivo, sem dependências de interface desnecessárias
+
+## Desenvolvimento local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para testar a versão de produção:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Configuração de URL
 
-## Learn More
+Por padrão, o SEO usa `https://portfolio-seven-flax-47.vercel.app`. Ao configurar um domínio próprio, defina a variável de ambiente abaixo na Vercel:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+NEXT_PUBLIC_SITE_URL=https://seu-dominio.com.br
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contato
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+O formulário abre uma mensagem pronta no WhatsApp da K2 Tech. O número pode ser atualizado em `components/PortfolioSite.tsx` na constante `whatsappNumber`.
