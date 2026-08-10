@@ -213,7 +213,7 @@ export default function PortfolioSite() {
               </div>
             </div>
             <div className="portrait-stage">
-              <div className="portrait-axis" aria-hidden="true"><span>FORTALEZA · BRASIL</span><span>2026</span></div>
+              <div className="portrait-axis" aria-hidden="true"><span>IBIMIRIM · BRASIL</span><span>2026</span></div>
               <div className="portrait-frame">
                 <Image src={ceoPortrait} alt="Anderson Jhonatan, CEO e fundador da K2 Tech" priority sizes="(max-width: 760px) 93vw, 43vw" />
                 <div className="portrait-name"><strong>ANDERSON</strong><span>JHONATAN</span></div>
@@ -304,7 +304,7 @@ export default function PortfolioSite() {
         </section>
       </main>
 
-      <footer className="executive-footer"><div className="site-width footer-grid"><p>ANDERSON JHONATAN<br /><span>CEO DA K2 TECH</span></p><span>FORTALEZA, CEARÁ · BRASIL</span><nav><a href="https://github.com/andersonjhonatan" target="_blank" rel="noreferrer"><FiGithub aria-hidden="true" /> GitHub</a><a href="https://www.linkedin.com/in/anderson-jhonatan/" target="_blank" rel="noreferrer"><FiLinkedin aria-hidden="true" /> LinkedIn</a><a href="https://www.instagram.com/_anderson.jhonatan/" target="_blank" rel="noreferrer"><FiInstagram aria-hidden="true" /> Instagram</a></nav><small>© 2026 · Todos os direitos reservados.</small></div></footer>
+      <footer className="executive-footer"><div className="site-width footer-grid"><p>ANDERSON JHONATAN<br /><span>CEO DA K2 TECH</span></p><span>IBIMIRIM, PERNAMBUCO · BRASIL</span><nav><a href="https://github.com/andersonjhonatan" target="_blank" rel="noreferrer"><FiGithub aria-hidden="true" /> GitHub</a><a href="https://www.linkedin.com/in/anderson-jhonatan/" target="_blank" rel="noreferrer"><FiLinkedin aria-hidden="true" /> LinkedIn</a><a href="https://www.instagram.com/_anderson.jhonatan/" target="_blank" rel="noreferrer"><FiInstagram aria-hidden="true" /> Instagram</a></nav><small>© 2026 · Todos os direitos reservados.</small></div></footer>
 
       {selectedCertificate && (
         <div className="certificate-modal" role="dialog" aria-modal="true" aria-label={selectedCertificate.title}>
