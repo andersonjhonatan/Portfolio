@@ -8,53 +8,7 @@
 .ref-footer-inner p{max-width:520px!important;margin:0 auto!important;text-align:center!important}
 .ref-footer-inner>small{display:block!important;width:100%!important;text-align:center!important}
 
-.ref-about,.ref-services,.ref-education,.ref-certificates,.ref-contact,.ref-evolution{scroll-margin-top:88px}
-
-.ref-evolution{position:relative;overflow:hidden;padding:110px 0;background:linear-gradient(180deg,#090b11 0%,#0b0e16 52%,#08090d 100%);border-bottom:1px solid rgba(245,245,247,.06)}
-.ref-evolution:before{position:absolute;top:-12rem;right:-8rem;width:34rem;height:34rem;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.12),transparent 66%);content:"";pointer-events:none}
-.ref-evolution-heading{position:relative;z-index:2;max-width:880px;margin-bottom:48px}
-.ref-evolution-heading h2{margin:20px 0 22px;font-family:var(--font-poppins),sans-serif;font-size:clamp(2.7rem,5vw,5.1rem);font-weight:500;letter-spacing:-.06em;line-height:.96}
-.ref-evolution-heading h2 strong{color:#4f83ff;font-weight:550}
-.ref-evolution-heading>p{max-width:760px;margin:0;color:#9198a8;font-size:.92rem;line-height:1.78}
-.ref-evolution-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(440px,.92fr);gap:34px;align-items:stretch}
-.ref-evolution-story{padding:30px;border:1px solid rgba(245,245,247,.08);border-radius:26px;background:linear-gradient(145deg,rgba(16,20,30,.96),rgba(10,13,20,.96));box-shadow:0 28px 70px rgba(0,0,0,.22)}
-.ref-evolution-years{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
-.ref-evolution-years article{padding:22px;border:1px solid rgba(245,245,247,.07);border-radius:18px;background:rgba(255,255,255,.018)}
-.ref-evolution-year-current{border-color:rgba(59,130,246,.18)!important;background:linear-gradient(145deg,rgba(37,99,235,.08),rgba(255,255,255,.016))!important}
-.ref-year-label{display:flex;align-items:center;gap:9px;color:#6f788c;font-size:.52rem;font-weight:750;letter-spacing:.13em}
-.ref-year-label span{padding:6px 8px;border:1px solid rgba(59,130,246,.18);border-radius:999px;color:#74a1ff;background:rgba(37,99,235,.06)}
-.ref-evolution-years h3{margin:18px 0 20px;color:#edf0f6;font-family:var(--font-poppins),sans-serif;font-size:1.05rem;font-weight:550;letter-spacing:-.035em;line-height:1.35}
-.ref-evolution-years ul{display:grid;gap:12px;margin:0;padding:0;list-style:none}
-.ref-evolution-years li{display:flex;align-items:flex-start;gap:9px;color:#858d9e;font-size:.72rem;line-height:1.55}
-.ref-evolution-years li svg{flex:0 0 auto;margin-top:3px;color:#4f83ff}
-.ref-evolution-arrow{align-self:center;color:#46516a;font-size:1.25rem}
-.ref-evolution-tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
-.ref-evolution-tech span{padding:7px 10px;border:1px solid rgba(245,245,247,.08);border-radius:999px;background:rgba(255,255,255,.018);color:#8790a2;font-size:.56rem;font-weight:650}
-.ref-evolution-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.ref-evolution-actions a{display:inline-flex;align-items:center;gap:9px;padding:13px 16px;border-radius:999px;background:#2563eb;color:#fff;font-size:.7rem;font-weight:700;transition:.2s}
-.ref-evolution-actions a:hover{transform:translateY(-2px)}
-.ref-evolution-actions .ref-evolution-secondary{border:1px solid rgba(245,245,247,.1);background:rgba(255,255,255,.025);color:#c3c9d5}
-.ref-evolution-actions a svg:last-child{font-size:.78rem}
-
-.ref-pokedex-visual{position:relative;min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
-.ref-pokedex-visual:before{position:absolute;inset:10% 5%;border-radius:40%;background:radial-gradient(circle,rgba(37,99,235,.16),transparent 68%);filter:blur(22px);content:""}
-.ref-pokedex-browser{position:relative;z-index:2;width:100%;overflow:hidden;border:1px solid rgba(92,132,255,.2);border-radius:24px;background:#090d15;box-shadow:0 32px 80px rgba(0,0,0,.42),0 0 0 1px rgba(255,255,255,.02) inset;transform:rotate(1.3deg)}
-.ref-pokedex-browserbar{min-height:48px;padding:0 14px;border-bottom:1px solid rgba(245,245,247,.07);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;background:#0e121c}
-.ref-pokedex-browserbar>div{display:flex;gap:5px}.ref-pokedex-browserbar>div span{width:7px;height:7px;border-radius:50%;background:#343c4e}.ref-pokedex-browserbar>div span:nth-child(2){background:#4b566d}.ref-pokedex-browserbar>div span:nth-child(3){background:#3b82f6}
-.ref-pokedex-browserbar small{color:#606a7e;font-size:.53rem;text-align:center}.ref-pokedex-browserbar em{font-style:normal;color:#6eb89f;font-size:.46rem;font-weight:800;letter-spacing:.12em}
-.ref-pokedex-dashboard{padding:22px}
-.ref-pokedex-topline{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.ref-pokedex-topline>div:first-child{display:flex;flex-direction:column;gap:5px}.ref-pokedex-topline small{color:#526077;font-size:.48rem;font-weight:750;letter-spacing:.14em}.ref-pokedex-topline strong{font-family:var(--font-poppins),sans-serif;color:#eef2f8;font-size:1.5rem;font-weight:600;letter-spacing:-.045em}
-.ref-pokedex-status{display:flex;align-items:center;gap:6px;padding:7px 9px;border:1px solid rgba(85,200,151,.12);border-radius:999px;color:#78ad9b;font-size:.48rem}.ref-pokedex-status span{width:5px;height:5px;border-radius:50%;background:#70c6a8;box-shadow:0 0 0 4px rgba(112,198,168,.07)}
-.ref-pokedex-search{height:42px;margin-top:20px;padding:0 12px;border:1px solid rgba(245,245,247,.08);border-radius:12px;display:flex;align-items:center;gap:8px;background:#0d121c;color:#5f6a7f;font-size:.57rem}.ref-pokedex-search>span{color:#6f8ed3;font-size:1rem}.ref-pokedex-search kbd{margin-left:auto;padding:3px 6px;border:1px solid rgba(245,245,247,.08);border-radius:6px;color:#5a6478;font-family:inherit;font-size:.46rem}
-.ref-pokedex-filterrow{display:flex;gap:6px;margin-top:10px;overflow:hidden}.ref-pokedex-filterrow span{padding:6px 8px;border:1px solid rgba(245,245,247,.06);border-radius:8px;background:#0b1019;color:#596579;font-size:.48rem;white-space:nowrap}.ref-pokedex-filterrow span:first-child{border-color:rgba(59,130,246,.18);background:rgba(37,99,235,.08);color:#76a2ff}
-.ref-pokedex-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.ref-pokedex-cards article{min-width:0;padding:12px;border:1px solid rgba(245,245,247,.07);border-radius:14px;background:linear-gradient(145deg,#101621,#0b0f17);display:flex;flex-direction:column;align-items:flex-start}.ref-pokemon-orb{width:42px;height:42px;margin-bottom:12px;border-radius:50%;display:grid;place-items:center;color:#dce7ff;font-size:.52rem;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,.28)}.ref-pokemon-orb--grass{background:radial-gradient(circle at 35% 30%,#6fbf88,#204c34 68%)}.ref-pokemon-orb--fire{background:radial-gradient(circle at 35% 30%,#ff9a68,#632d29 68%)}.ref-pokemon-orb--water{background:radial-gradient(circle at 35% 30%,#6aa8ff,#263d70 68%)}.ref-pokedex-cards article>small{color:#4d596d;font-size:.43rem}.ref-pokedex-cards article>strong{max-width:100%;margin:4px 0;color:#d7dce6;font-size:.62rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ref-pokedex-cards article>span{color:#697488;font-size:.43rem}
-.ref-pokedex-code{margin-top:14px;padding:12px;border:1px solid rgba(59,130,246,.1);border-radius:13px;background:#080c13;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#78869f;font-size:.48rem;line-height:1.6;overflow:hidden}.ref-pokedex-code div{display:flex;align-items:center;gap:6px}.ref-pokedex-code div>span{color:#b89fff}.ref-pokedex-code em{color:#6fa1ff;font-style:normal}.ref-pokedex-code p{margin:3px 0;padding-left:14px;white-space:nowrap}.ref-pokedex-code p strong{color:#7b8aa5;font-weight:500}.ref-pokedex-code div:last-child{justify-content:space-between}.ref-pokedex-code div:last-child small{color:#6eb89f}
-.ref-pokedex-float{position:absolute;z-index:4;padding:8px 10px;border:1px solid rgba(59,130,246,.18);border-radius:999px;background:rgba(8,12,20,.86);backdrop-filter:blur(12px);color:#7ea7ff;font-size:.48rem;font-weight:800;letter-spacing:.11em;box-shadow:0 12px 30px rgba(0,0,0,.25)}.ref-pokedex-float--one{left:0;top:17%}.ref-pokedex-float--two{right:4%;bottom:13%;color:#7fc3aa;border-color:rgba(85,200,151,.16)}
-
-@media(max-width:980px){
-  .ref-evolution-grid{grid-template-columns:1fr}
-  .ref-pokedex-visual{min-height:520px;max-width:680px;width:100%;margin:0 auto}
-}
+.ref-about,.ref-services,.ref-education,.ref-certificates,.ref-contact{scroll-margin-top:88px}
 
 @media(max-width:820px){
   .ref-certificate-card:first-child .ref-certificate-image{min-height:230px}
@@ -64,33 +18,4 @@
   .ref-footer-inner>div span{font-size:.86rem!important}
   .ref-footer-inner p{font-size:.78rem!important;line-height:1.65!important}
   .ref-footer-inner>small{font-size:.62rem!important;line-height:1.5!important}
-  .ref-evolution{padding:82px 0}
-  .ref-evolution-heading{margin-bottom:34px}
-  .ref-evolution-heading h2{font-size:clamp(2.35rem,12vw,3.6rem)}
-  .ref-evolution-story{padding:18px;border-radius:21px}
-  .ref-evolution-years{grid-template-columns:1fr;gap:12px}
-  .ref-evolution-arrow{transform:rotate(90deg);justify-self:center}
-  .ref-evolution-years article{padding:18px}
-  .ref-evolution-actions{flex-direction:column}
-  .ref-evolution-actions a{justify-content:center;width:100%}
-  .ref-pokedex-visual{min-height:auto;padding:18px 2px 28px}
-  .ref-pokedex-browser{transform:none;border-radius:20px}
-  .ref-pokedex-dashboard{padding:16px}
-  .ref-pokedex-topline{flex-direction:column}
-  .ref-pokedex-cards{gap:6px}
-  .ref-pokedex-cards article{padding:9px}
-  .ref-pokemon-orb{width:36px;height:36px}
-  .ref-pokedex-float--one{left:-6px;top:13%}
-  .ref-pokedex-float--two{right:-4px;bottom:5%}
-}
-
-@media(max-width:480px){
-  .ref-evolution-heading>p{font-size:.84rem}
-  .ref-evolution-years h3{font-size:.98rem}
-  .ref-pokedex-browserbar small{display:none}
-  .ref-pokedex-browserbar{grid-template-columns:1fr auto}
-  .ref-pokedex-status{font-size:.44rem}
-  .ref-pokedex-cards article>strong{font-size:.54rem}
-  .ref-pokedex-cards article>span{display:none}
-  .ref-pokedex-code p{font-size:.43rem;transform:scale(.94);transform-origin:left center}
 }
