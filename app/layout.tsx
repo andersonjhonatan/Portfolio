@@ -3,6 +3,7 @@ import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import './k2-overrides.css'
 import './reference-portfolio.css'
+import './portfolio-fixes.css'
 
 const inter = Inter({
   subsets: ['latin'],
