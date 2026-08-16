@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
+import './k2-overrides.css'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#07080d',
+  themeColor: '#0b0b0c',
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
