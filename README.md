@@ -1,46 +1,29 @@
-# Anderson Jhonatan — CEO da K2 Tech
+# Anderson Jhonatan — Portfólio
 
-Portfólio pessoal de Anderson Jhonatan, CEO e fundador da K2 Tech. O site apresenta a visão, o processo de trabalho, projetos selecionados e um contato direto pelo WhatsApp.
+Portfólio pessoal de Anderson Jhonatan, desenvolvedor Full Stack e CEO da K2 Tech.
 
-## O que foi atualizado
+O site reúne apresentação profissional, formação, competências, stack, projetos pessoais, diploma, certificados e formas de contato.
 
-- Reestruturação total da arquitetura e da apresentação visual.
-- Posicionamento como CEO e fundador da K2 Tech, em vez de um currículo técnico genérico.
-- Projetos reais organizados como portfólio de experiências digitais.
-- Design responsivo com identidade preto/grafite, azul elétrico e detalhes dourados.
-- Contato que inicia uma conversa no WhatsApp sem armazenar dados no site.
-- SEO básico: metadados, ícone, manifesto, `robots.txt` e sitemap.
-- Base técnica atualizada para Next.js 16 e React 19.
-
-## Tecnologias
-
-- Next.js 16
-- React 19
-- TypeScript
-- CSS responsivo, sem dependências de interface desnecessárias
-
-## Desenvolvimento local
+## Desenvolvimento
 
 ```bash
 npm install
 npm run dev
 ```
 
-Para testar a versão de produção:
+## Build
 
 ```bash
 npm run build
-npm run start
 ```
 
-## Configuração de URL
+## Tecnologias
 
-Por padrão, o SEO usa `https://portfolio-seven-flax-47.vercel.app`. Ao configurar um domínio próprio, defina a variável de ambiente abaixo na Vercel:
+- Next.js
+- React
+- TypeScript
+- CSS
 
-```bash
-NEXT_PUBLIC_SITE_URL=https://seu-dominio.com.br
-```
+## Projetos comerciais
 
-## Contato
-
-O formulário abre uma mensagem pronta no WhatsApp da K2 Tech. O número pode ser atualizado em `components/PortfolioSite.tsx` na constante `whatsappNumber`.
+Os projetos comerciais e soluções digitais da empresa ficam organizados no portfólio da K2 Tech.
