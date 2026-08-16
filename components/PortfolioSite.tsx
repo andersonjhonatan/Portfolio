@@ -32,6 +32,7 @@ import unidadeCurricular from '@/public/certificados/UC-2fdbb2be-e8e2-4969-9d9f-
 const whatsappNumber = '5587991104152'
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá, Anderson. Vi seu portfólio e gostaria de conversar.')}`
 const k2SiteUrl = 'https://k2tech.vercel.app'
+const diplomaPublico = '/certificados/diploma-cruzeiro-do-sul.svg'
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/andersonjhonatan', icon: FiGithub },
@@ -39,9 +40,14 @@ const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/_anderson.jhonatan/', icon: FiInstagram },
 ]
 
-type Certificate = { title: string; category: string; image: StaticImageData }
+type Certificate = { title: string; category: string; image: StaticImageData | string }
 
 const certificates: Certificate[] = [
+  {
+    title: 'Diploma — Análise e Desenvolvimento de Sistemas',
+    category: 'Universidade Cruzeiro do Sul · 2024',
+    image: diplomaPublico,
+  },
   { title: 'Formação acadêmica', category: 'Cruzeiro do Sul', image: faculdade2 },
   { title: 'Back-End', category: 'Trybe', image: backEnd },
   { title: 'Fundamentos de tecnologia', category: 'Trybe', image: fundamentos },
@@ -158,7 +164,7 @@ export default function PortfolioSite() {
             <a href="#sobre">Sobre</a>
             <a href="#servicos">O que eu faço</a>
             <a href="#formacao">Formação</a>
-            <a href="#qualificacoes">Certificados</a>
+            <a href="#qualificacoes">Diploma & Certificados</a>
             <a href="#contato">Contato</a>
           </nav>
 
@@ -182,7 +188,7 @@ export default function PortfolioSite() {
             <a href="#sobre" onClick={closeMenu}>Sobre</a>
             <a href="#servicos" onClick={closeMenu}>O que eu faço</a>
             <a href="#formacao" onClick={closeMenu}>Formação</a>
-            <a href="#qualificacoes" onClick={closeMenu}>Certificados</a>
+            <a href="#qualificacoes" onClick={closeMenu}>Diploma & Certificados</a>
             <a href="#contato" onClick={closeMenu}>Contato</a>
             <a href={`${k2SiteUrl}/projetos`} target="_blank" rel="noreferrer">Projetos K2 Tech</a>
             <button type="button" onClick={closePortfolio}>Voltar para a entrada</button>
@@ -204,7 +210,7 @@ export default function PortfolioSite() {
 
         <section className="ref-quick-facts" aria-label="Resumo profissional">
           <div className="ref-container ref-facts-grid">
-            <article><span>Formação</span><strong>Desenvolvimento de Sistemas</strong><small>Cruzeiro do Sul</small></article>
+            <article><span>Formação</span><strong>Análise e Desenvolvimento de Sistemas</strong><small>Cruzeiro do Sul</small></article>
             <article><span>Especialização</span><strong>Full Stack</strong><small>Trybe · curso completo</small></article>
             <article><span>Empresa</span><strong>CEO · K2 Tech</strong><small>Produto, web e experiências</small></article>
             <article><span>Base</span><strong>Ibimirim · PE</strong><small>Brasil</small></article>
@@ -265,9 +271,9 @@ export default function PortfolioSite() {
               <article className="ref-education-card">
                 <FiAward aria-hidden="true" />
                 <span>FORMAÇÃO ACADÊMICA</span>
-                <h3>Desenvolvimento de Sistemas</h3>
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
                 <p>Universidade Cruzeiro do Sul</p>
-                <small><FiCheck aria-hidden="true" /> Formação concluída</small>
+                <small><FiCheck aria-hidden="true" /> Formação concluída em 2024</small>
               </article>
               <article className="ref-education-card ref-education-card--blue">
                 <FiCode aria-hidden="true" />
@@ -292,15 +298,16 @@ export default function PortfolioSite() {
         <section className="ref-certificates" id="qualificacoes">
           <div className="ref-container">
             <div className="ref-section-heading">
-              <div className="ref-section-tag"><span>05</span> CERTIFICADOS</div>
-              <h2>Formações e conquistas<br /><strong>que podem ser comprovadas.</strong></h2>
+              <div className="ref-section-tag"><span>05</span> DIPLOMA & CERTIFICADOS</div>
+              <h2>Formação e conquistas<br /><strong>que podem ser comprovadas.</strong></h2>
+              <p>O diploma acadêmico aparece primeiro, seguido pelas certificações complementares da minha formação técnica.</p>
             </div>
 
             <div className="ref-certificate-grid">
               {certificates.map((certificate, index) => (
                 <button className="ref-certificate-card" type="button" key={`${certificate.title}-${index}`} onClick={() => setCertificateIndex(index)}>
                   <div className="ref-certificate-image">
-                    <Image src={certificate.image} alt="" fill sizes="(max-width: 760px) 82vw, 30vw" />
+                    <Image src={certificate.image} alt="" fill sizes="(max-width: 760px) 82vw, 30vw" unoptimized={typeof certificate.image === 'string'} />
                     <span><FiArrowUpRight aria-hidden="true" /></span>
                   </div>
                   <div className="ref-certificate-meta">
@@ -355,7 +362,7 @@ export default function PortfolioSite() {
           <button className="modal-backdrop" type="button" aria-label="Fechar certificado" onClick={() => setCertificateIndex(null)} />
           <div className="modal-content">
             <div className="modal-meta"><span>{String((certificateIndex ?? 0) + 1).padStart(2, '0')} / {String(certificates.length).padStart(2, '0')}</span><span>{selectedCertificate.category}</span></div>
-            <Image src={selectedCertificate.image} alt={selectedCertificate.title} sizes="92vw" priority />
+            <Image src={selectedCertificate.image} alt={selectedCertificate.title} sizes="92vw" priority unoptimized={typeof selectedCertificate.image === 'string'} />
             <div className="modal-controls">
               <button type="button" onClick={showPreviousCertificate} aria-label="Certificado anterior"><FiChevronLeft aria-hidden="true" /></button>
               <p>{selectedCertificate.title}</p>
