@@ -40,6 +40,8 @@ const whatsappNumber = '5587991104152'
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   'Olá, Anderson. Vi seu portfólio e gostaria de conversar sobre um projeto.',
 )}`
+const k2SiteUrl = 'https://k2tech.vercel.app'
+const k2WhatsappUrl = 'https://wa.me/5587991104152?text=Ol%C3%A1%2C%20vim%20pelo%20portf%C3%B3lio%20do%20Anderson%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20da%20K2%20Tech.'
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/andersonjhonatan', icon: FiGithub },
@@ -199,16 +201,16 @@ export default function PortfolioSite() {
             <span className="brand-copy">Anderson Jhonatan<small>CEO · K2 TECH</small></span>
           </a>
           <nav className="desktop-nav" aria-label="Navegação principal">
-            <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
+            <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#formacao">Formação</a><a href="#k2tech">K2 Tech</a><a href="#contato">Contato</a>
           </nav>
-          <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Falar comigo <FiArrowUpRight aria-hidden="true" /></a>
+          <a className="header-cta" href={k2WhatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento <FiArrowUpRight aria-hidden="true" /></a>
           <button className="mobile-menu-button" type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menuOpen}>
             {menuOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
           </button>
         </div>
         {menuOpen && (
           <nav className="mobile-nav portfolio-container" aria-label="Navegação móvel">
-            <a href="#sobre" onClick={closeMenu}>Sobre</a><a href="#projetos" onClick={closeMenu}>Projetos</a><a href="#formacao" onClick={closeMenu}>Formação</a><a href="#contato" onClick={closeMenu}>Contato</a><a href={whatsappUrl} target="_blank" rel="noreferrer">Conversar no WhatsApp</a>
+            <a href="#sobre" onClick={closeMenu}>Sobre</a><a href="#projetos" onClick={closeMenu}>Projetos</a><a href="#formacao" onClick={closeMenu}>Formação</a><a href="#k2tech" onClick={closeMenu}>K2 Tech</a><a href="#contato" onClick={closeMenu}>Contato</a><a href={k2WhatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento</a>
           </nav>
         )}
       </header>
@@ -221,16 +223,16 @@ export default function PortfolioSite() {
               <div className="hero-kicker"><span className="live-dot" />CEO · FULL-STACK DEVELOPER · K2 TECH</div>
               <h1><span>ANDERSON</span><em>JHONATAN</em></h1>
               <p className="hero-text">Eu uno desenvolvimento, direção visual e visão de produto para transformar ideias em experiências digitais com presença.</p>
-              <div className="hero-actions">
-                <a className="button button--primary" href="#projetos">Ver projetos <FiArrowDownRight aria-hidden="true" /></a>
-                <a className="button button--ghost" href="#formacao">Minha formação <FiAward aria-hidden="true" /></a>
+              <div className="hero-actions hero-actions--paths">
+                <a className="button button--primary" href="#sobre">Meu portfólio completo <FiArrowDownRight aria-hidden="true" /></a>
+                <a className="button button--ghost button--k2" href="#k2tech"><span className="button-k2-mark">K2</span> K2 Tech · Serviços Web <FiArrowDownRight aria-hidden="true" /></a>
               </div>
               <div className="hero-socials" aria-label="Redes sociais">
                 {socialLinks.map(({ label, href, icon: Icon }) => <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}><Icon aria-hidden="true" /><span>{label}</span></a>)}
               </div>
             </div>
             <div className="hero-portrait-wrap">
-              <div className="portrait-orbit portrait-orbit--outer" aria-hidden="true"><i /><i /></div><div className="portrait-orbit portrait-orbit--inner" aria-hidden="true"><i /></div><div className="portrait-halo" aria-hidden="true" />
+              <div className="portrait-orbit portrait-orbit--outer" aria-hidden="true"><i /><i /></div><div className="portrait-orbit portrait-orbit--inner" aria-hidden="true"><i /></div><span className="profile-orbit-dot" aria-hidden="true" /><div className="portrait-halo" aria-hidden="true" />
               <div className="portrait-card"><Image src={ceoPortrait} alt="Anderson Jhonatan, CEO da K2 Tech" priority sizes="(max-width: 900px) 78vw, 38vw" /><div className="portrait-shade" /></div>
               <div className="portrait-chip portrait-chip--role"><span>01</span>CEO / K2 TECH</div><div className="portrait-chip portrait-chip--stack"><span>&lt;/&gt;</span>FULL STACK</div><div className="portrait-chip portrait-chip--location"><span className="live-dot" />IBIMIRIM · PE</div>
             </div>
@@ -239,6 +241,36 @@ export default function PortfolioSite() {
         </section>
 
         <section className="signal-strip" aria-label="Especialidades"><div className="signal-track"><span>DESENVOLVIMENTO FULL STACK</span><i /><span>PRODUTO DIGITAL</span><i /><span>DESIGN & EXPERIÊNCIA</span><i /><span>NEXT.JS</span><i /><span>K2 TECH</span><i /><span>DESENVOLVIMENTO FULL STACK</span><i /><span>PRODUTO DIGITAL</span><i /><span>DESIGN & EXPERIÊNCIA</span><i /></div></section>
+
+        <section className="k2-section section" id="k2tech">
+          <div className="k2-network" aria-hidden="true"><i /><i /><i /><i /><i /></div>
+          <div className="portfolio-container">
+            <div className="k2-section-head">
+              <div>
+                <p className="eyebrow"><span>K2</span> SOLUÇÕES DIGITAIS</p>
+                <div className="k2-brand-lockup" aria-label="K2 Tech"><strong>K2</strong><small>T<span>Ξ</span>CH</small></div>
+              </div>
+              <div className="k2-intro-copy"><span>TECNOLOGIA PARA CRESCIMENTO REAL</span><h2>Seu negócio com uma presença digital <em>profissional.</em></h2><p>A K2 Tech cria sites, experiências interativas e soluções digitais com foco em visual, performance e resultado.</p></div>
+            </div>
+
+            <div className="k2-offers">
+              <article className="k2-offer-card">
+                <div className="k2-offer-top"><span>01</span><FiCode aria-hidden="true" /></div>
+                <div><small>CRIAÇÃO DE SITES</small><h3>Site profissional</h3><p>Presença digital moderna e responsiva para apresentar seu negócio, seus serviços e facilitar novos contatos.</p></div>
+                <div className="k2-price"><span>A PARTIR DE</span><strong>R$ 299,90</strong></div>
+                <a href={k2WhatsappUrl} target="_blank" rel="noreferrer">Quero meu site <FiArrowUpRight aria-hidden="true" /></a>
+              </article>
+              <article className="k2-offer-card k2-offer-card--featured">
+                <div className="k2-offer-top"><span>02</span><FiMousePointer aria-hidden="true" /></div>
+                <div><small>CONVITE INTERATIVO</small><h3>Convite que vira experiência</h3><p>Convites digitais personalizados, mobile-first e com interações que deixam a experiência muito além de uma imagem.</p></div>
+                <div className="k2-price"><span>A PARTIR DE</span><strong>R$ 49,90</strong></div>
+                <a href={k2WhatsappUrl} target="_blank" rel="noreferrer">Criar meu convite <FiArrowUpRight aria-hidden="true" /></a>
+              </article>
+            </div>
+
+            <div className="k2-footer-row"><p><span>&lt;/&gt;</span> Desenvolvimento Web <span>▣</span> Sistemas Personalizados <span>↗</span> Soluções Inteligentes</p><div><a href={k2SiteUrl} target="_blank" rel="noreferrer">Visitar site oficial <FiArrowUpRight aria-hidden="true" /></a><a href={k2WhatsappUrl} target="_blank" rel="noreferrer"><SiWhatsapp aria-hidden="true" /> Falar com a K2 Tech</a></div></div>
+          </div>
+        </section>
 
         <section className="about-section section" id="sobre">
           <div className="portfolio-container">
