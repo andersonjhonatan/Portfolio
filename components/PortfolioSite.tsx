@@ -31,7 +31,7 @@ import unidadeCurricular from '@/public/certificados/UC-2fdbb2be-e8e2-4969-9d9f-
 
 const whatsappNumber = '5587991104152'
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá, Anderson. Vi seu portfólio e gostaria de conversar.')}`
-const k2SiteUrl = 'https://k2tech.vercel.app'
+const k2SiteUrl = 'https://k2-tech.vercel.app'
 const diplomaPublico = '/certificados/diploma-cruzeiro-do-sul.svg'
 
 const socialLinks = [
