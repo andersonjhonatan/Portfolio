@@ -6,7 +6,6 @@ import {
   FiArrowDownRight,
   FiArrowUpRight,
   FiAward,
-  FiBriefcase,
   FiCheck,
   FiChevronLeft,
   FiChevronRight,
@@ -53,9 +52,24 @@ const certificates: Certificate[] = [
 ]
 
 const capabilities = [
-  { number: '01', icon: FiLayers, title: 'Produto & interface', text: 'Sites, landing pages e experiências digitais com hierarquia clara, personalidade e responsividade real.', chips: ['UX/UI', 'React', 'Next.js', 'TypeScript'] },
-  { number: '02', icon: FiCode, title: 'Full Stack', text: 'Da interface à regra de negócio, com base técnica para construir soluções completas, organizadas e evolutivas.', chips: ['Node.js', 'APIs', 'MySQL', 'Docker'] },
-  { number: '03', icon: FiMousePointer, title: 'Experiência & conversão', text: 'Direção visual, microinterações e fluxos pensados para transformar navegação em percepção de valor.', chips: ['Mobile-first', 'Animação', 'Performance', 'SEO'] },
+  {
+    icon: FiLayers,
+    title: 'Produto & Interface',
+    text: 'Sites, landing pages e experiências digitais com hierarquia clara, identidade visual e responsividade real.',
+    chips: ['UX/UI', 'React', 'Next.js', 'TypeScript'],
+  },
+  {
+    icon: FiCode,
+    title: 'Desenvolvimento Full Stack',
+    text: 'Construção da interface à regra de negócio, conectando front-end, back-end, APIs e dados em uma solução completa.',
+    chips: ['Node.js', 'APIs', 'MySQL', 'Docker'],
+  },
+  {
+    icon: FiMousePointer,
+    title: 'Experiência & Conversão',
+    text: 'Microinterações, performance e decisões visuais pensadas para transformar navegação em percepção de valor.',
+    chips: ['Mobile-first', 'Performance', 'SEO', 'Animação'],
+  },
 ]
 
 const stack = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Express', 'MySQL', 'Sequelize', 'Docker', 'Git', 'Tailwind CSS', 'Redux']
@@ -66,20 +80,26 @@ export default function PortfolioSite() {
   const [certificateIndex, setCertificateIndex] = useState<number | null>(null)
   const selectedCertificate = certificateIndex === null ? null : certificates[certificateIndex]
 
-  function closeMenu() { setMenuOpen(false) }
   function openPortfolio() {
     setPortfolioOpen(true)
     setMenuOpen(false)
     window.setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0)
   }
+
   function closePortfolio() {
     setPortfolioOpen(false)
     setMenuOpen(false)
     window.setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0)
   }
+
+  function closeMenu() {
+    setMenuOpen(false)
+  }
+
   function showPreviousCertificate() {
     setCertificateIndex((current) => current === null ? 0 : (current - 1 + certificates.length) % certificates.length)
   }
+
   function showNextCertificate() {
     setCertificateIndex((current) => current === null ? 0 : (current + 1) % certificates.length)
   }
@@ -127,84 +147,223 @@ export default function PortfolioSite() {
   }
 
   return (
-    <div className="portfolio-shell full-portfolio">
-      <header className="portfolio-header">
-        <div className="portfolio-container header-inner">
-          <button className="brand-mark brand-mark--button" type="button" onClick={closePortfolio} aria-label="Voltar para a página inicial">
-            <span className="brand-symbol">AJ</span>
-            <span className="brand-copy">Anderson Jhonatan<small>PORTFÓLIO PESSOAL</small></span>
+    <div className="ref-portfolio">
+      <header className="ref-header">
+        <div className="ref-container ref-header-inner">
+          <button className="ref-logo" type="button" onClick={closePortfolio} aria-label="Voltar para a página inicial">
+            <span>AJ</span>
           </button>
-          <nav className="desktop-nav" aria-label="Navegação principal">
-            <a href="#sobre">Sobre</a><a href="#formacao">Formação</a><a href="#qualificacoes">Certificados</a><a href="#contato">Contato</a>
+
+          <nav className="ref-nav" aria-label="Navegação principal">
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">O que eu faço</a>
+            <a href="#formacao">Formação</a>
+            <a href="#qualificacoes">Certificados</a>
+            <a href="#contato">Contato</a>
           </nav>
-          <a className="header-cta" href={k2SiteUrl} target="_blank" rel="noreferrer">Projetos na K2 Tech <FiArrowUpRight aria-hidden="true" /></a>
-          <button className="mobile-menu-button" type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menuOpen}>
+
+          <a className="ref-k2-link" href={`${k2SiteUrl}/projetos`} target="_blank" rel="noreferrer">
+            K2 Tech <FiArrowUpRight aria-hidden="true" />
+          </a>
+
+          <button
+            className="ref-menu-button"
+            type="button"
+            aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
             {menuOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
           </button>
         </div>
+
         {menuOpen && (
-          <nav className="mobile-nav portfolio-container" aria-label="Navegação móvel">
-            <a href="#sobre" onClick={closeMenu}>Sobre</a><a href="#formacao" onClick={closeMenu}>Formação</a><a href="#qualificacoes" onClick={closeMenu}>Certificados</a><a href="#contato" onClick={closeMenu}>Contato</a><a href={k2SiteUrl} target="_blank" rel="noreferrer">Ver projetos na K2 Tech</a><button type="button" onClick={closePortfolio}>Voltar para início</button>
+          <nav className="ref-mobile-nav" aria-label="Navegação móvel">
+            <a href="#sobre" onClick={closeMenu}>Sobre</a>
+            <a href="#servicos" onClick={closeMenu}>O que eu faço</a>
+            <a href="#formacao" onClick={closeMenu}>Formação</a>
+            <a href="#qualificacoes" onClick={closeMenu}>Certificados</a>
+            <a href="#contato" onClick={closeMenu}>Contato</a>
+            <a href={`${k2SiteUrl}/projetos`} target="_blank" rel="noreferrer">Projetos K2 Tech</a>
+            <button type="button" onClick={closePortfolio}>Voltar para a entrada</button>
           </nav>
         )}
       </header>
 
       <main>
-        <section className="portfolio-intro">
-          <div className="portfolio-container portfolio-intro-grid">
-            <div><p className="eyebrow"><span>00</span> PORTFÓLIO PESSOAL</p><h1>Formação, experiência e uma visão completa do meu trabalho.</h1></div>
-            <p>Desenvolvedor Full Stack e CEO da K2 Tech. Aqui estão minha trajetória, formação, qualificações e a base técnica que sustenta o que construo.</p>
+        <section className="ref-hero">
+          <div className="ref-hero-grid" aria-hidden="true" />
+          <div className="ref-container ref-hero-content">
+            <div className="ref-pill"><span /> FULL STACK · CEO K2 TECH</div>
+            <h1>Anderson<br /><strong>Jhonatan</strong></h1>
+            <p>Desenvolvedor Full Stack com visão de produto, design e negócio. Crio experiências digitais que precisam funcionar bem, comunicar melhor e gerar valor.</p>
+            <a href="#sobre" className="ref-primary-button">Conheça minha trajetória <FiArrowDownRight aria-hidden="true" /></a>
+            <div className="ref-scroll">SCROLL <span /></div>
           </div>
-          <a className="portfolio-intro-scroll" href="#sobre">Explorar <FiArrowDownRight aria-hidden="true" /></a>
         </section>
 
-        <section className="about-section section" id="sobre">
-          <div className="portfolio-container">
-            <div className="section-heading section-heading--split"><div><p className="eyebrow"><span>01</span> SOBRE MIM</p><h2>Não construo só páginas.<br /><em>Construo presença.</em></h2></div><p>Meu trabalho está no encontro entre código, design e negócio. A tecnologia é a base; a experiência que ela cria é o que realmente importa.</p></div>
-            <div className="about-grid">
-              <article className="about-story glass-card"><div className="card-index">AJ / 01</div><p className="about-lead">Sou Anderson Jhonatan, CEO e fundador da K2 Tech e desenvolvedor Full Stack.</p><p>Minha trajetória combina desenvolvimento de software com a construção de produtos digitais que precisam ser claros, rápidos, bonitos e úteis. Hoje aplico essa visão em experiências e soluções digitais desenvolvidas através da K2 Tech.</p><div className="about-signature"><span>Anderson Jhonatan</span><small>CEO · K2 TECH</small></div></article>
-              <div className="about-side"><article className="mini-stat glass-card"><span>BASE</span><strong>Full Stack</strong><p>Front-end, back-end, dados e entrega no mesmo raciocínio de produto.</p></article><article className="mini-stat glass-card"><span>FOCO</span><strong>Experiência</strong><p>Interfaces com identidade, hierarquia visual, performance e intenção.</p></article><article className="mini-stat glass-card mini-stat--accent"><FiBriefcase aria-hidden="true" /><p>“A melhor tecnologia é aquela que faz a experiência parecer simples.”</p></article></div>
+        <section className="ref-quick-facts" aria-label="Resumo profissional">
+          <div className="ref-container ref-facts-grid">
+            <article><span>Formação</span><strong>Desenvolvimento de Sistemas</strong><small>Cruzeiro do Sul</small></article>
+            <article><span>Especialização</span><strong>Full Stack</strong><small>Trybe · curso completo</small></article>
+            <article><span>Empresa</span><strong>CEO · K2 Tech</strong><small>Produto, web e experiências</small></article>
+            <article><span>Base</span><strong>Ibimirim · PE</strong><small>Brasil</small></article>
+          </div>
+        </section>
+
+        <section className="ref-about" id="sobre">
+          <div className="ref-container ref-about-layout">
+            <div className="ref-about-photo">
+              <Image src={ceoPortrait} alt="Anderson Jhonatan" fill sizes="(max-width: 860px) 100vw, 44vw" />
+              <div className="ref-photo-badge"><span>DESDE</span><strong>K2</strong><small>TECH</small></div>
+            </div>
+
+            <div className="ref-about-copy">
+              <div className="ref-section-tag"><span>01</span> SOBRE MIM</div>
+              <h2>Prazer,<br /><strong>sou Anderson.</strong></h2>
+              <p className="ref-about-lead">Desenvolvedor Full Stack, CEO e fundador da K2 Tech.</p>
+              <p>Minha trajetória une desenvolvimento de software, direção visual e visão de produto. Gosto de entender o problema inteiro antes de pensar na tecnologia, porque uma boa solução precisa ser útil para quem usa e sustentável para quem mantém.</p>
+              <p>Hoje aplico essa visão na K2 Tech, criando sites, produtos digitais e experiências interativas com foco em qualidade, clareza, performance e identidade.</p>
+              <div className="ref-skill-pills">
+                {['React', 'Next.js', 'TypeScript', 'Node.js', 'APIs', 'MySQL', 'UX/UI', 'SEO'].map((skill) => <span key={skill}>{skill}</span>)}
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="education-section section" id="formacao">
-          <div className="portfolio-container">
-            <div className="section-heading"><p className="eyebrow"><span>02</span> FORMAÇÃO</p><h2>Formação técnica com<br /><em>base acadêmica.</em></h2></div>
-            <div className="education-grid">
-              <article className="education-card education-card--university"><div className="education-icon"><FiAward aria-hidden="true" /></div><div><span className="education-type">FORMAÇÃO ACADÊMICA</span><h3>Desenvolvimento de Sistemas</h3><p>Universidade Cruzeiro do Sul</p></div><div className="education-status"><FiCheck aria-hidden="true" /> Formação concluída</div></article>
-              <article className="education-card education-card--trybe"><div className="education-icon"><FiCode aria-hidden="true" /></div><div><span className="education-type">FORMAÇÃO PROFISSIONAL</span><h3>Desenvolvimento Web Full Stack</h3><p>Trybe</p></div><div className="education-status"><FiCheck aria-hidden="true" /> Curso completo</div></article>
+        <section className="ref-services" id="servicos">
+          <div className="ref-container">
+            <div className="ref-section-heading">
+              <div className="ref-section-tag"><span>02</span> O QUE EU FAÇO</div>
+              <h2>Técnica para construir.<br /><strong>Visão para decidir.</strong></h2>
+              <p>Minha atuação não fica presa a uma única camada. Eu conecto interface, código, performance e objetivo de negócio.</p>
             </div>
-            <div className="education-note"><span>02.1</span><p>Uma formação construída para entender o produto inteiro: interface, lógica, APIs, banco de dados, versionamento, testes e entrega.</p></div>
+
+            <div className="ref-service-list">
+              {capabilities.map(({ icon: Icon, title, text, chips }, index) => (
+                <article className="ref-service-card" key={title}>
+                  <div className="ref-service-icon"><Icon aria-hidden="true" /></div>
+                  <div className="ref-service-index">0{index + 1}</div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <div className="ref-card-chips">{chips.map((chip) => <span key={chip}>{chip}</span>)}</div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="capabilities-section section" id="capacidade">
-          <div className="portfolio-container">
-            <div className="section-heading section-heading--split"><div><p className="eyebrow"><span>03</span> CAPACIDADES</p><h2>Capacidade técnica.<br /><em>Visão de produto.</em></h2></div><p>Não separo tecnologia de experiência. Cada decisão visual precisa conversar com performance, manutenção e objetivo de negócio.</p></div>
-            <div className="capability-grid">{capabilities.map(({ number, icon: Icon, title, text, chips }) => <article className="capability-card" key={title}><div className="capability-top"><span>{number}</span><Icon aria-hidden="true" /></div><h3>{title}</h3><p>{text}</p><div className="chip-row">{chips.map((chip) => <span key={chip}>{chip}</span>)}</div></article>)}</div>
+        <section className="ref-education" id="formacao">
+          <div className="ref-container">
+            <div className="ref-section-heading">
+              <div className="ref-section-tag"><span>03</span> FORMAÇÃO</div>
+              <h2>Base acadêmica.<br /><strong>Formação prática.</strong></h2>
+              <p>Uma combinação que me permite entender fundamentos, aplicação técnica e entrega de produto de ponta a ponta.</p>
+            </div>
+
+            <div className="ref-education-grid">
+              <article className="ref-education-card">
+                <FiAward aria-hidden="true" />
+                <span>FORMAÇÃO ACADÊMICA</span>
+                <h3>Desenvolvimento de Sistemas</h3>
+                <p>Universidade Cruzeiro do Sul</p>
+                <small><FiCheck aria-hidden="true" /> Formação concluída</small>
+              </article>
+              <article className="ref-education-card ref-education-card--blue">
+                <FiCode aria-hidden="true" />
+                <span>FORMAÇÃO PROFISSIONAL</span>
+                <h3>Desenvolvimento Web Full Stack</h3>
+                <p>Trybe</p>
+                <small><FiCheck aria-hidden="true" /> Curso completo</small>
+              </article>
+            </div>
           </div>
         </section>
 
-        <section className="stack-section" aria-label="Tecnologias"><div className="portfolio-container stack-header"><span>STACK / FERRAMENTAS</span><span>12 TECNOLOGIAS</span></div><div className="stack-track">{[...stack, ...stack].map((item, index) => <span key={`${item}-${index}`}>{item}<i /></span>)}</div></section>
-
-        <section className="certificates-section section" id="qualificacoes">
-          <div className="portfolio-container">
-            <div className="section-heading section-heading--split"><div><p className="eyebrow"><span>04</span> CERTIFICADOS</p><h2>Aprendizado que pode<br /><em>ser comprovado.</em></h2></div><p>Formações e certificações organizadas em uma galeria simples de consultar.</p></div>
-            <div className="certificate-grid">{certificates.map((certificate, index) => <button className="certificate-card" type="button" key={`${certificate.title}-${index}`} onClick={() => setCertificateIndex(index)}><div className="certificate-preview"><Image src={certificate.image} alt="" fill sizes="(max-width: 760px) 85vw, 30vw" /><span><FiArrowUpRight aria-hidden="true" /></span></div><div className="certificate-info"><span>{String(index + 1).padStart(2, '0')}</span><div><strong>{certificate.title}</strong><small>{certificate.category}</small></div></div></button>)}</div>
+        <section className="ref-stack" aria-label="Tecnologias">
+          <div className="ref-container">
+            <div className="ref-section-tag"><span>04</span> STACK & FERRAMENTAS</div>
+            <div className="ref-stack-grid">
+              {stack.map((item, index) => <span key={item}><small>{String(index + 1).padStart(2, '0')}</small>{item}</span>)}
+            </div>
           </div>
         </section>
 
-        <section className="contact-section section" id="contato">
-          <div className="contact-glow" aria-hidden="true" />
-          <div className="portfolio-container contact-layout"><div><p className="eyebrow"><span>05</span> CONTATO</p><h2>Vamos trocar<br /><em>uma ideia.</em></h2><p className="contact-copy">Para conhecer projetos comerciais, sites e experiências interativas, o portfólio completo de trabalhos está concentrado na K2 Tech.</p></div><div className="contact-actions"><a className="contact-main" href={whatsappUrl} target="_blank" rel="noreferrer"><SiWhatsapp aria-hidden="true" /><span><small>CONVERSAR AGORA</small>WhatsApp</span><FiArrowUpRight aria-hidden="true" /></a><a className="contact-secondary" href="https://github.com/andersonjhonatan" target="_blank" rel="noreferrer"><FiGithub aria-hidden="true" /><span><small>PERFIL TÉCNICO</small>GitHub</span><FiArrowUpRight aria-hidden="true" /></a><a className="contact-secondary" href={`${k2SiteUrl}/projetos`} target="_blank" rel="noreferrer"><FiArrowUpRight aria-hidden="true" /><span><small>PORTFÓLIO DA EMPRESA</small>Projetos K2 Tech</span><FiArrowUpRight aria-hidden="true" /></a></div></div>
+        <section className="ref-certificates" id="qualificacoes">
+          <div className="ref-container">
+            <div className="ref-section-heading">
+              <div className="ref-section-tag"><span>05</span> CERTIFICADOS</div>
+              <h2>Formações e conquistas<br /><strong>que podem ser comprovadas.</strong></h2>
+            </div>
+
+            <div className="ref-certificate-grid">
+              {certificates.map((certificate, index) => (
+                <button className="ref-certificate-card" type="button" key={`${certificate.title}-${index}`} onClick={() => setCertificateIndex(index)}>
+                  <div className="ref-certificate-image">
+                    <Image src={certificate.image} alt="" fill sizes="(max-width: 760px) 82vw, 30vw" />
+                    <span><FiArrowUpRight aria-hidden="true" /></span>
+                  </div>
+                  <div className="ref-certificate-meta">
+                    <small>{String(index + 1).padStart(2, '0')}</small>
+                    <div><strong>{certificate.title}</strong><span>{certificate.category}</span></div>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="ref-k2-bridge">
+          <div className="ref-container ref-k2-bridge-card">
+            <div>
+              <div className="ref-section-tag"><span>06</span> PROJETOS</div>
+              <h2>Os trabalhos comerciais<br /><strong>vivem na K2 Tech.</strong></h2>
+              <p>Sites, sistemas, convites interativos e experiências digitais estão organizados no portfólio da empresa.</p>
+            </div>
+            <a href={`${k2SiteUrl}/projetos`} target="_blank" rel="noreferrer">Ver projetos K2 Tech <FiArrowUpRight aria-hidden="true" /></a>
+          </div>
+        </section>
+
+        <section className="ref-contact" id="contato">
+          <div className="ref-container ref-contact-layout">
+            <div>
+              <div className="ref-section-tag"><span>07</span> CONTATO</div>
+              <h2>Meu<br /><strong>contato.</strong></h2>
+              <p>Conecte-se comigo pelas redes ou envie uma mensagem direta.</p>
+            </div>
+
+            <div className="ref-contact-list">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer"><SiWhatsapp aria-hidden="true" /><span><small>WHATSAPP</small>Conversar agora</span><FiArrowUpRight aria-hidden="true" /></a>
+              <a href="https://github.com/andersonjhonatan" target="_blank" rel="noreferrer"><FiGithub aria-hidden="true" /><span><small>GITHUB</small>andersonjhonatan</span><FiArrowUpRight aria-hidden="true" /></a>
+              <a href="https://www.linkedin.com/in/anderson-jhonatan/" target="_blank" rel="noreferrer"><FiLinkedin aria-hidden="true" /><span><small>LINKEDIN</small>Anderson Jhonatan</span><FiArrowUpRight aria-hidden="true" /></a>
+              <a href="https://www.instagram.com/_anderson.jhonatan/" target="_blank" rel="noreferrer"><FiInstagram aria-hidden="true" /><span><small>INSTAGRAM</small>@_anderson.jhonatan</span><FiArrowUpRight aria-hidden="true" /></a>
+            </div>
+          </div>
         </section>
       </main>
 
-      <footer className="portfolio-footer"><div className="portfolio-container footer-inner"><div className="footer-brand"><span className="brand-symbol">AJ</span><div><strong>Anderson Jhonatan</strong><small>CEO · K2 TECH</small></div></div><span className="footer-location">IBIMIRIM · PERNAMBUCO · BRASIL</span><nav aria-label="Redes sociais do rodapé">{socialLinks.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noreferrer">{label}</a>)}</nav><small>© 2026 · Tecnologia com propósito. Ideias que ganham presença.</small></div></footer>
+      <footer className="ref-footer">
+        <div className="ref-container ref-footer-inner">
+          <div><strong>AJ</strong><span>Anderson Jhonatan</span></div>
+          <p>Tecnologia com propósito. Ideias que ganham presença.</p>
+          <small>© 2026 · Ibimirim, Pernambuco</small>
+        </div>
+      </footer>
 
       {selectedCertificate && (
-        <div className="certificate-modal" role="dialog" aria-modal="true" aria-label={selectedCertificate.title}><button className="modal-backdrop" type="button" aria-label="Fechar certificado" onClick={() => setCertificateIndex(null)} /><div className="modal-content"><div className="modal-meta"><span>{String((certificateIndex ?? 0) + 1).padStart(2, '0')} / {String(certificates.length).padStart(2, '0')}</span><span>{selectedCertificate.category}</span></div><Image src={selectedCertificate.image} alt={selectedCertificate.title} sizes="92vw" priority /><div className="modal-controls"><button type="button" onClick={showPreviousCertificate} aria-label="Certificado anterior"><FiChevronLeft aria-hidden="true" /></button><p>{selectedCertificate.title}</p><button type="button" onClick={showNextCertificate} aria-label="Próximo certificado"><FiChevronRight aria-hidden="true" /></button><button type="button" onClick={() => setCertificateIndex(null)} aria-label="Fechar"><FiX aria-hidden="true" /></button></div></div></div>
+        <div className="certificate-modal" role="dialog" aria-modal="true" aria-label={selectedCertificate.title}>
+          <button className="modal-backdrop" type="button" aria-label="Fechar certificado" onClick={() => setCertificateIndex(null)} />
+          <div className="modal-content">
+            <div className="modal-meta"><span>{String((certificateIndex ?? 0) + 1).padStart(2, '0')} / {String(certificates.length).padStart(2, '0')}</span><span>{selectedCertificate.category}</span></div>
+            <Image src={selectedCertificate.image} alt={selectedCertificate.title} sizes="92vw" priority />
+            <div className="modal-controls">
+              <button type="button" onClick={showPreviousCertificate} aria-label="Certificado anterior"><FiChevronLeft aria-hidden="true" /></button>
+              <p>{selectedCertificate.title}</p>
+              <button type="button" onClick={showNextCertificate} aria-label="Próximo certificado"><FiChevronRight aria-hidden="true" /></button>
+              <button type="button" onClick={() => setCertificateIndex(null)} aria-label="Fechar"><FiX aria-hidden="true" /></button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   )
