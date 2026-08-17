@@ -6,6 +6,7 @@
 .heading h2{margin:18px 0 12px;font-family:var(--font-poppins),var(--font-inter),sans-serif;font-size:clamp(2.2rem,4.5vw,4.1rem);font-weight:500;letter-spacing:-.055em;line-height:1}
 .heading h2 strong{color:#4f83ff;font-weight:550}
 .heading p{margin:0;color:#8f96a7;font-size:.9rem;line-height:1.7}
+.cards{display:grid;gap:18px}
 .card{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.7fr);overflow:hidden;border:1px solid rgba(245,245,247,.08);border-radius:24px;background:linear-gradient(145deg,#10141e,#0b0e15)}
 .copy{padding:30px}
 .eyebrow{display:inline-flex;padding:7px 10px;border:1px solid rgba(59,130,246,.16);border-radius:999px;background:rgba(37,99,235,.06);color:#7ea7ff;font-size:.54rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
@@ -25,5 +26,16 @@
 .pokemonRow i{display:block;width:34px;height:34px;margin:0 auto 8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#6aa8ff,#263d70 70%);font-style:normal}
 .pokemonRow div:nth-child(2) i{background:radial-gradient(circle at 35% 30%,#ff9a68,#632d29 70%)}
 .pokemonRow div:nth-child(3) i{background:radial-gradient(circle at 35% 30%,#6fbf88,#204c34 70%)}
+.weatherCard{background:linear-gradient(145deg,#0c1726,#09111b);border-color:rgba(96,176,255,.14)}
+.weatherEyebrow{border-color:rgba(88,185,255,.2);background:rgba(27,132,214,.08);color:#8bd2ff}
+.weatherVisual{background:radial-gradient(circle at 70% 15%,rgba(90,190,255,.22),transparent 34%),linear-gradient(160deg,#153b5b 0%,#0d2034 48%,#08111d 100%)}
+.weatherWindow{width:min(100%,360px);padding:17px;border:1px solid rgba(180,225,255,.16);border-radius:22px;background:linear-gradient(145deg,rgba(10,24,39,.94),rgba(7,15,26,.9));box-shadow:0 28px 70px rgba(0,0,0,.3)}
+.weatherTop{display:flex;align-items:center;justify-content:space-between;color:#8fa7bb;font-size:.5rem;text-transform:uppercase;letter-spacing:.1em}
+.weatherTop span:first-child{display:flex;align-items:center;gap:7px}.weatherTop b{display:grid;width:23px;height:23px;place-items:center;border-radius:7px;background:rgba(255,255,255,.1);color:#fff;font-size:.5rem}
+.weatherLocation{margin-top:17px;color:#7e9bb1;font-size:.46rem;font-weight:700;letter-spacing:.12em}
+.weatherHero{display:flex;align-items:center;gap:14px;margin-top:10px}.weatherIcon{font-size:3.2rem;line-height:1;color:#ffd96d;text-shadow:0 0 30px rgba(255,211,88,.28)}
+.weatherHero div{display:grid}.weatherHero strong{color:#f4f8ff;font-size:3rem;font-weight:300;line-height:.92;letter-spacing:-.08em}.weatherHero small{margin-top:5px;color:#88a3b8;font-size:.55rem}
+.weatherMetrics{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:18px}.weatherMetrics span{display:grid;gap:4px;padding:9px;border:1px solid rgba(255,255,255,.06);border-radius:10px;background:rgba(255,255,255,.025)}.weatherMetrics small{color:#637e92;font-size:.38rem;letter-spacing:.08em}.weatherMetrics b{color:#d9e9f7;font-size:.52rem;font-weight:650}
+.weatherForecast{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}.weatherForecast span{display:grid;gap:5px;padding:8px 5px;border-radius:9px;background:rgba(255,255,255,.035);text-align:center;color:#7890a4;font-size:.4rem}.weatherForecast b{color:#f2f7fb;font-size:.55rem}
 @media(max-width:820px){.section{padding:72px 0}.card{grid-template-columns:1fr}.copy{padding:24px}.visual{min-height:250px}.heading h2{font-size:clamp(2rem,10vw,3rem)}}
-@media(max-width:480px){.container{width:min(100% - 24px,1180px)}.copy{padding:20px}.visual{padding:18px}.window{padding:14px}.heading p,.copy p{font-size:.82rem}}
+@media(max-width:480px){.container{width:min(100% - 24px,1180px)}.copy{padding:20px}.visual{padding:18px}.window,.weatherWindow{padding:14px}.heading p,.copy p{font-size:.82rem}.weatherHero strong{font-size:2.65rem}.weatherMetrics{grid-template-columns:1fr 1fr}.weatherMetrics span:last-child{grid-column:1/-1}.weatherForecast{grid-template-columns:repeat(2,1fr)}}
